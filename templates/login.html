@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+         <meta charset="UTF-8" name="google-signin-client_id" content="503693956193-qaq9k02vibebr4la22ta1ggsutbmj5ts.apps.googleusercontent.com">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<script src="http://mymaplist.com/js/vendor/TweenLite.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+<!------ Include the above in your HEAD tag ---------->
+
+    <style>
+        @media (min-width: 768px) {
+  .form-search .combobox-container,
+  .form-inline .combobox-container {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: top;
+  }
+  .form-search .combobox-container .input-group-addon,
+  .form-inline .combobox-container .input-group-addon {
+    width: auto;
+  }
+}
+
+.combobox-selected .caret {
+  display: none;
+}
+
+
+/* :not doesn't work in IE8 */
+
+.combobox-container:not(.combobox-selected) .glyphicon-remove {
+  display: none;
+}
+
+.typeahead-long {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.control-group.error .combobox-container .add-on {
+  color: #B94A48;
+  border-color: #B94A48;
+}
+
+.control-group.error .combobox-container .caret {
+  border-top-color: #B94A48;
+}
+
+.control-group.warning .combobox-container .add-on {
+  color: #C09853;
+  border-color: #C09853;
+}
+
+.control-group.warning .combobox-container .caret {
+  border-top-color: #C09853;
+}
+
+.control-group.success .combobox-container .add-on {
+  color: #468847;
+  border-color: #468847;
+}
+
+.control-group.success .combobox-container .caret {
+  border-top-color: #468847;
+}
+
+
+
+        </style>
+</head>
+<body>
+
+    <br>
+    <br>
+ <div class="container" id = "content">
+    <div class="row vertical-offset-100">
+    	<div class="col-md-4 col-md-offset-4">
+    		<div class="panel panel-default">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title">Login in the system</h3>
+			 	</div>
+			  	<div class="panel-body">
+			    	<form accept-charset="UTF-8" name = "form" method="post"  id = "subform" enctype="multipart/form-data">
+
+                        {% csrf_token %}
+
+
+
+			    	  	<div class="form-group">
+			    		    <input id = "user_name" class="form-control" placeholder="nickname" name="user_name" type="text" minlength="4" maxlength="30" required >
+			    		</div>
+			    		<div class="form-group">
+			    			<input id = "password" class="form-control" placeholder="password" name="password" type="password" value="" minlength="6" maxlength="30" required>
+			    		</div>
+
+
+			    		<input  id = "but" class="btn btn-lg btn-dark btn-block" type="submit" value="Login in" >
+			    	    <br>
+
+			      	</form>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+     $(document).ready(function() {
+
+        $("#subform").submit(function(e){
+            e.preventDefault();
+            $.ajax({
+                   url: "",
+                    async: true,
+                dataType: 'json',
+                   type: 'POST', // This is the default though, you don't actually need to always mention it
+                   data: {
+
+                         'user_name': document.getElementById("user_name").value,
+                        'password': document.getElementById("password").value,
+                       'csrfmiddlewaretoken': '{{ csrf_token }}'
+                   },
+                   success: function (data) {
+                        if (data.answer === "back"){
+                             window.location = "{% url 'enter' %}";
+                        }
+                        alert(data.answer)
+                   }.bind(this),
+                   failure: function (data) {
+                       alert('Got an error dude');
+                   }
+})
+        })
+
+     })
+
+</script>
+
+</body>
+</html>

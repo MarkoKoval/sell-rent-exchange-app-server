@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Js module</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+<script src = "js/V.js"></script>
+    <div id="app">
+  {{ message }}
+    </div>
+
+
+<script type="module">
+  import {sayHi} from 'js/script.js';
+
+  document.body.innerHTML = sayHi('John');
+</script>
+</body>
+</html>

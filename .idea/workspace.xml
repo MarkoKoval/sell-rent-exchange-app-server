@@ -1,0 +1,1432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/buy_rent_barter_app/models.py" line="458" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="57e35cf4-8a32-411a-a8f5-6df05422f97b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/subscription-app/src/components/Create.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription-app/src/components/Edit.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription-app/src/components/Index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription-app/src/components/login/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription-app/src/components/login/login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription-app/src/components/navbar/navbar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription-app/src/components/register/register.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription-app/src/components/register/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription-app/src/components/search-bar/search-bar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription-app/src/components/select_bar/select-bar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription-app/src/components/three_select/three_select.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription-app/src/router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription-app/src/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subscription-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/subscription-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subscription-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/subscription-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subscription-app/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/subscription-app/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subscription-app/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/subscription-app/src/components/HelloWorld.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subscription-app/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/subscription-app/src/main.js" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/App$bcrypt.coverage" NAME="bcrypt Coverage Results" MODIFIED="1587372412013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/buy_rent_barter_app" />
+    <SUITE FILE_PATH="coverage/App$bcrypt__1_.coverage" NAME="bcrypt (1) Coverage Results" MODIFIED="1587375469879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/App$tests.coverage" NAME="tests Coverage Results" MODIFIED="1587330271542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/buy_rent_barter_app" />
+    <SUITE FILE_PATH="coverage/App$uu.coverage" NAME="uu Coverage Results" MODIFIED="1587333707114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="App" />
+  </component>
+  <component name="FileEditorManager">
+    <splitter split-orientation="horizontal" split-proportion="0.8628945">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/subscription-app/src/App.vue">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="425">
+                  <caret line="25" selection-start-line="25" selection-end-line="25" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/subscription-app/src/components/Create.vue">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1343">
+                  <caret line="79" column="21" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="21" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/subscription-app/src/components/Edit.vue">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1173">
+                  <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/subscription-app/src/components/Index.vue">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="527">
+                  <caret line="31" column="12" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="15" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/subscription-app/src/main.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="17">
+                  <caret line="1" column="13" selection-start-line="1" selection-end-line="1" selection-end-column="21" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/subscription-app/src/components/navbar/navbar.vue">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="204">
+                  <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+                  <folding>
+                    <element signature="e#1211#1257#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/subscription-app/src/router.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="34">
+                  <caret line="8" selection-start-line="8" selection-end-line="8" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                    <element signature="e#18#40#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/subscription-app/src/components/search-bar/search-bar.vue">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="51">
+                  <caret line="3" column="53" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/subscription-app/src/components/select_bar/select-bar.vue">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="476">
+                  <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/subscription-app/src/components/three_select/three_select.vue">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="323">
+                  <caret line="19" column="49" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="53" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/templates/login.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="17">
+                  <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="Python Script" />
+        <option value="CSS File" />
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>find_graphviz()</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/subscription-app" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/i.html" />
+        <option value="$PROJECT_DIR$/templates/js/1.js" />
+        <option value="$PROJECT_DIR$/templates/js/2.js" />
+        <option value="$PROJECT_DIR$/templates/js/Person.js" />
+        <option value="$PROJECT_DIR$/templates/js/Book.js" />
+        <option value="$PROJECT_DIR$/templates/js/V.js" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/js/script.js" />
+        <option value="$PROJECT_DIR$/templates/location.html" />
+        <option value="$PROJECT_DIR$/buy_rent_barter_app/models.py" />
+        <option value="$PROJECT_DIR$/App/urls.py" />
+        <option value="$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/pydotplus/graphviz.py" />
+        <option value="$PROJECT_DIR$/App/settings.py" />
+        <option value="$PROJECT_DIR$/uu.py" />
+        <option value="$PROJECT_DIR$/buy_rent_barter_app/tests.py" />
+        <option value="$PROJECT_DIR$/buy_rent_barter_app/bcrypt.py" />
+        <option value="$PROJECT_DIR$/bcrypt.py" />
+        <option value="$PROJECT_DIR$/buy_rent_barter_app/views.py" />
+        <option value="$PROJECT_DIR$/subscription-app/src/components/login/login.css" />
+        <option value="$PROJECT_DIR$/subscription-app/src/components/register/register.vue" />
+        <option value="$PROJECT_DIR$/subscription-app/src/components/register/style.css" />
+        <option value="$PROJECT_DIR$/subscription-app/src/store.js" />
+        <option value="$PROJECT_DIR$/subscription-app/src/components/Index.vue" />
+        <option value="$PROJECT_DIR$/subscription-app/src/components/HelloWorld.vue" />
+        <option value="$PROJECT_DIR$/subscription-app/src/components/Edit.vue" />
+        <option value="$PROJECT_DIR$/subscription-app/src/components/Create.vue" />
+        <option value="$PROJECT_DIR$/subscription-app/src/components/l.vue" />
+        <option value="$PROJECT_DIR$/subscription-app/package.json" />
+        <option value="$PROJECT_DIR$/subscription-app/babel.config.js" />
+        <option value="$PROJECT_DIR$/subscription-app/src/router.js" />
+        <option value="$PROJECT_DIR$/subscription-app/src/components/login/login.vue" />
+        <option value="$PROJECT_DIR$/subscription-app/src/main.js" />
+        <option value="$PROJECT_DIR$/subscription-app/src/components/navbar/navbar.vue" />
+        <option value="$PROJECT_DIR$/subscription-app/src/components/search-bar/search-bar.vue" />
+        <option value="$PROJECT_DIR$/subscription-app/src/components/select_bar/select-bar.vue" />
+        <option value="$PROJECT_DIR$/subscription-app/src/components/three_select/three_select.vue" />
+        <option value="$PROJECT_DIR$/subscription-app/src/App.vue" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="126" />
+    <option name="y" value="20" />
+    <option name="width" value="1635" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="subscription-app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="subscription-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="subscription-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="subscription-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="three_select" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ПРАКТИКА2020Коваль/Хрінь/currency-converter_" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Acer\Desktop\семестр88\App\templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Acer\Desktop\семестр88\App" />
+      <recent name="C:\Users\Acer\Desktop\семестр88\App\templates" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.bcrypt (1)">
+    <configuration name="bcrypt (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="App" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bcrypt.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="bcrypt" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="App" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/buy_rent_barter_app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/buy_rent_barter_app/bcrypt.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="App" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/buy_rent_barter_app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/buy_rent_barter_app/tests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="uu" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="App" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/uu.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="App" type="Python.DjangoServer" factoryName="Django server">
+      <module name="App" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="App.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.bcrypt (1)" />
+        <item itemvalue="Python.bcrypt" />
+        <item itemvalue="Python.uu" />
+        <item itemvalue="Python.tests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="57e35cf4-8a32-411a-a8f5-6df05422f97b" name="Default Changelist" comment="" />
+      <created>1586870802652</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586870802652</updated>
+      <workItem from="1586870888339" duration="21312000" />
+      <workItem from="1586902493723" duration="9974000" />
+      <workItem from="1586956135868" duration="21952000" />
+      <workItem from="1587069328167" duration="655000" />
+      <workItem from="1587237506755" duration="5367000" />
+      <workItem from="1587271468133" duration="33753000" />
+      <workItem from="1587322374907" duration="11860000" />
+      <workItem from="1587335422223" duration="627000" />
+      <workItem from="1587336075379" duration="1111000" />
+      <workItem from="1587369196244" duration="42408000" />
+      <workItem from="1587455824420" duration="597000" />
+      <workItem from="1587460351503" duration="742000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="150358000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="101" y="16" width="1308" height="832" extended-state="1" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.70464134" visible="true" weight="0.20833333" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.29535866" side_tool="true" weight="0.20224719" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29857144" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32285714" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32967034" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.19668426" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.33954155" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="4" />
+      <window_info anchor="bottom" id="Python Console" order="5" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Find" order="7" />
+      <window_info anchor="bottom" id="Run" order="8" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="SciView" order="1" />
+      <window_info anchor="right" id="Commander" order="2" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/subscription-app/src/store.js</url>
+          <line>1</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/templates/js/V.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/django/core/management/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="559">
+          <caret line="374" selection-start-line="374" selection-end-line="374" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+          <folding>
+            <element signature="e#627#659#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DjangoModelDependency/#App">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DjangoModelDependency</ID>
+          <OriginalElement>#App</OriginalElement>
+          <nodes>
+            <node x="662.7607142857141" y="554.0">buy_rent_barter_app.models.ChainExchangeWishes</node>
+            <node x="117.49999999999977" y="317.0">buy_rent_barter_app.models.ComplainAnswers</node>
+            <node x="2878.349242424242" y="129.0">buy_rent_barter_app.models.DesiredItemsDescriptionTags</node>
+            <node x="3144.8250000000003" y="317.0">buy_rent_barter_app.models.AdvertisementsItemsRentConditions</node>
+            <node x="1595.2000000000003" y="317.0">buy_rent_barter_app.models.AdvertisementsItemsPrices</node>
+            <node x="4143.125" y="475.0">buy_rent_barter_app.models.AdsItemsRentRequestsAnswers</node>
+            <node x="1270.2000000000003" y="317.0">buy_rent_barter_app.models.PossibleExchangeItems</node>
+            <node x="4125.625" y="396.0">buy_rent_barter_app.models.RentRequests</node>
+            <node x="0.0" y="475.0">buy_rent_barter_app.models.ChainExchangeParticipantsAnswers</node>
+            <node x="2340.8250000000003" y="317.0">buy_rent_barter_app.models.DesiredItemExistenceNotifications</node>
+            <node x="205.74999999999977" y="208.0">buy_rent_barter_app.models.Complains</node>
+            <node x="1030.2000000000003" y="129.0">django.contrib.contenttypes.models.ContentType</node>
+            <node x="2801.599242424242" y="208.0">buy_rent_barter_app.models.DesiredAdsItemsQueries</node>
+            <node x="702.4999999999998" y="396.0">buy_rent_barter_app.models.AdsItemBuyRequestAnswer</node>
+            <node x="1893.6583333333338" y="129.0">buy_rent_barter_app.models.Images</node>
+            <node x="2041.8250000000003" y="317.0">buy_rent_barter_app.models.PossibleRentItems</node>
+            <node x="3538.8250000000003" y="317.0">buy_rent_barter_app.models.UsersAdvertisementsLocationsDistances</node>
+            <node x="2049.3250000000003" y="208.0">buy_rent_barter_app.models.Advertisements</node>
+            <node x="1772.3250000000003" y="208.0">buy_rent_barter_app.models.UserMessages</node>
+            <node x="3472.625" y="396.0">buy_rent_barter_app.models.ExchangeRequests</node>
+            <node x="3816.125" y="475.0">buy_rent_barter_app.models.RentRequestPriceOffers</node>
+            <node x="2724.8250000000003" y="317.0">buy_rent_barter_app.models.AdvertisementsItemsExchangeConditions</node>
+            <node x="741.4999999999998" y="317.0">buy_rent_barter_app.models.BuyRequests</node>
+            <node x="970.3250000000003" y="208.0">buy_rent_barter_app.models.ExchangeRequestsPriceOffers</node>
+            <node x="2327.820285635053" y="106.400628581993">buy_rent_barter_app.models.AdvertisementsTags</node>
+            <node x="4326.625" y="129.0">buy_rent_barter_app.models.Donations</node>
+            <node x="1838.1583333333333" y="0.0">buy_rent_barter_app.models.Users</node>
+            <node x="414.4999999999998" y="317.0">buy_rent_barter_app.models.FavoriteAdvertisements</node>
+            <node x="3429.125" y="475.0">buy_rent_barter_app.models.AdsItemExchangeRequestsAnswers</node>
+            <node x="1328.3250000000003" y="208.0">buy_rent_barter_app.models.AdItemBuyRentExchangeOnFinishingRankings</node>
+            <node x="30.5" y="396.0">buy_rent_barter_app.models.PossibleChainExchange</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="buy_rent_barter_app.models.RentRequests" target="buy_rent_barter_app.models.Users">
+              <point x="63.5" y="-14.5" />
+              <point x="4316.125" y="59.0" />
+              <point x="2026.5511904761906" y="59.0" />
+              <point x="82.89285714285711" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.UsersAdvertisementsLocationsDistances" target="buy_rent_barter_app.models.Users">
+              <point x="98.25" y="-14.5" />
+              <point x="3833.5750000000003" y="79.0" />
+              <point x="1996.4083333333333" y="79.0" />
+              <point x="52.75" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.AdvertisementsItemsPrices" target="buy_rent_barter_app.models.Advertisements">
+              <point x="0.0" y="-14.5" />
+              <point x="1756.7000000000003" y="297.0" />
+              <point x="2151.991666666667" y="297.0" />
+              <point x="-29.333333333333485" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.UserMessages" target="buy_rent_barter_app.models.Images">
+              <point x="85.66666666666674" y="-14.5" />
+              <point x="1986.4916666666668" y="188.0" />
+              <point x="2004.1583333333338" y="188.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.Donations" target="buy_rent_barter_app.models.Users">
+              <point x="0.0" y="-14.5" />
+              <point x="4445.125" y="49.0" />
+              <point x="2041.622619047619" y="49.0" />
+              <point x="97.96428571428578" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.ComplainAnswers" target="buy_rent_barter_app.models.Users">
+              <point x="-69.25" y="-14.5" />
+              <point x="186.74999999999977" y="297.0" />
+              <point x="195.24999999999977" y="297.0" />
+              <point x="195.24999999999977" y="59.0" />
+              <point x="1860.7654761904764" y="59.0" />
+              <point x="-82.89285714285711" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.ChainExchangeWishes" target="buy_rent_barter_app.models.PossibleExchangeItems">
+              <point x="74.75" y="-14.5" />
+              <point x="887.0107142857141" y="529.0" />
+              <point x="1422.7000000000003" y="529.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.DesiredAdsItemsQueries" target="buy_rent_barter_app.models.DesiredItemsDescriptionTags">
+              <point x="78.0" y="-14.5" />
+              <point x="3035.599242424242" y="188.0" />
+              <point x="3047.349242424242" y="188.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.FavoriteAdvertisements" target="buy_rent_barter_app.models.Advertisements">
+              <point x="76.75" y="-14.5" />
+              <point x="644.7499999999998" y="267.0" />
+              <point x="2063.991666666667" y="267.0" />
+              <point x="-117.33333333333348" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.UsersAdvertisementsLocationsDistances" target="buy_rent_barter_app.models.Advertisements">
+              <point x="-98.25" y="-14.5" />
+              <point x="3637.0750000000003" y="257.0" />
+              <point x="2298.6583333333333" y="257.0" />
+              <point x="117.33333333333303" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.DesiredAdsItemsQueries" target="buy_rent_barter_app.models.Users">
+              <point x="-78.0" y="-14.5" />
+              <point x="2879.599242424242" y="188.0" />
+              <point x="2867.849242424242" y="188.0" />
+              <point x="2867.849242424242" y="89.0" />
+              <point x="1981.3369047619049" y="89.0" />
+              <point x="37.67857142857156" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.ComplainAnswers" target="buy_rent_barter_app.models.Complains">
+              <point x="69.25" y="-14.5" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.Advertisements" target="buy_rent_barter_app.models.Images">
+              <point x="-88.0" y="-14.5" />
+              <point x="2093.3250000000003" y="188.0" />
+              <point x="2077.8250000000003" y="188.0" />
+              <point x="73.66666666666652" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.AdsItemsRentRequestsAnswers" target="buy_rent_barter_app.models.RentRequests">
+              <point x="0.0" y="-14.5" />
+              <point x="63.5" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.Complains" target="buy_rent_barter_app.models.Users">
+              <point x="-59.75" y="-14.5" />
+              <point x="265.4999999999998" y="69.0" />
+              <point x="1875.8369047619049" y="69.0" />
+              <point x="-67.82142857142867" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.AdItemBuyRentExchangeOnFinishingRankings" target="buy_rent_barter_app.models.Users">
+              <point x="0.0" y="-14.5" />
+              <point x="1540.3250000000003" y="99.0" />
+              <point x="1921.0511904761906" y="99.0" />
+              <point x="-22.60714285714289" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.PossibleChainExchange" target="buy_rent_barter_app.models.Users">
+              <point x="-76.5" y="-14.5" />
+              <point x="107.0" y="49.0" />
+              <point x="1845.6940476190475" y="49.0" />
+              <point x="-97.96428571428578" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.ExchangeRequestsPriceOffers" target="django.contrib.contenttypes.models.ContentType">
+              <point x="0.0" y="-14.5" />
+              <point x="-36.375" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.DesiredItemExistenceNotifications" target="buy_rent_barter_app.models.Advertisements">
+              <point x="-91.0" y="-14.5" />
+              <point x="2431.8250000000003" y="297.0" />
+              <point x="2210.6583333333338" y="297.0" />
+              <point x="29.333333333333485" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.UserMessages" target="buy_rent_barter_app.models.Users">
+              <point x="0.0" y="-14.5" />
+              <point x="1900.8250000000003" y="178.0" />
+              <point x="1883.1583333333338" y="178.0" />
+              <point x="1883.1583333333338" y="109.0" />
+              <point x="1936.122619047619" y="109.0" />
+              <point x="-7.535714285714221" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.RentRequests" target="buy_rent_barter_app.models.PossibleRentItems">
+              <point x="-63.5" y="-14.5" />
+              <point x="4189.125" y="366.0" />
+              <point x="2181.3250000000003" y="366.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.AdvertisementsItemsExchangeConditions" target="buy_rent_barter_app.models.Advertisements">
+              <point x="-100.0" y="-14.5" />
+              <point x="2824.8250000000003" y="287.0" />
+              <point x="2239.991666666667" y="287.0" />
+              <point x="58.666666666666515" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.Advertisements" target="buy_rent_barter_app.models.AdvertisementsTags">
+              <point x="88.0" y="-14.5" />
+              <point x="2269.3250000000003" y="188.0" />
+              <point x="2302.8250000000003" y="188.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.AdsItemBuyRequestAnswer" target="buy_rent_barter_app.models.BuyRequests">
+              <point x="0.0" y="-14.5" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.AdvertisementsItemsExchangeConditions" target="buy_rent_barter_app.models.DesiredAdsItemsQueries">
+              <point x="100.0" y="-14.5" />
+              <point x="3024.8250000000003" y="297.0" />
+              <point x="2957.599242424242" y="297.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.ChainExchangeWishes" target="buy_rent_barter_app.models.ChainExchangeParticipantsAnswers">
+              <point x="-74.75" y="-14.5" />
+              <point x="737.5107142857141" y="529.0" />
+              <point x="183.5" y="529.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.DesiredItemExistenceNotifications" target="buy_rent_barter_app.models.DesiredAdsItemsQueries">
+              <point x="91.0" y="-14.5" />
+              <point x="2613.8250000000003" y="297.0" />
+              <point x="2853.599242424242" y="297.0" />
+              <point x="-104.0" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.Images" target="buy_rent_barter_app.models.Users">
+              <point x="0.0" y="-14.5" />
+              <point x="2004.1583333333338" y="109.0" />
+              <point x="1951.1940476190475" y="109.0" />
+              <point x="7.535714285714221" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.AdsItemExchangeRequestsAnswers" target="buy_rent_barter_app.models.ExchangeRequests">
+              <point x="0.0" y="-14.5" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.PossibleChainExchange" target="buy_rent_barter_app.models.PossibleExchangeItems">
+              <point x="76.5" y="-14.5" />
+              <point x="260.0" y="376.0" />
+              <point x="1321.0333333333338" y="376.0" />
+              <point x="-101.66666666666652" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.Complains" target="django.contrib.contenttypes.models.ContentType">
+              <point x="59.75" y="-14.5" />
+              <point x="384.9999999999998" y="188.0" />
+              <point x="1066.5750000000003" y="188.0" />
+              <point x="-109.125" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.AdvertisementsItemsRentConditions" target="buy_rent_barter_app.models.DesiredAdsItemsQueries">
+              <point x="93.5" y="-14.5" />
+              <point x="3425.3250000000003" y="267.0" />
+              <point x="3061.599242424242" y="267.0" />
+              <point x="104.0" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.AdvertisementsItemsRentConditions" target="buy_rent_barter_app.models.Advertisements">
+              <point x="-93.5" y="-14.5" />
+              <point x="3238.3250000000003" y="277.0" />
+              <point x="2269.3250000000003" y="277.0" />
+              <point x="88.0" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.AdItemBuyRentExchangeOnFinishingRankings" target="buy_rent_barter_app.models.Images">
+              <point x="141.33333333333348" y="-14.5" />
+              <point x="1681.6583333333338" y="188.0" />
+              <point x="1930.4916666666668" y="188.0" />
+              <point x="-73.66666666666674" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.FavoriteAdvertisements" target="buy_rent_barter_app.models.Users">
+              <point x="-76.75" y="-14.5" />
+              <point x="491.2499999999998" y="79.0" />
+              <point x="1890.9083333333333" y="79.0" />
+              <point x="-52.75" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.ExchangeRequests" target="buy_rent_barter_app.models.Users">
+              <point x="70.0" y="-14.5" />
+              <point x="3682.625" y="376.0" />
+              <point x="3942.3250000000003" y="376.0" />
+              <point x="3942.3250000000003" y="69.0" />
+              <point x="2011.4797619047622" y="69.0" />
+              <point x="67.82142857142867" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.BuyRequests" target="buy_rent_barter_app.models.Advertisements">
+              <point x="62.25" y="-14.5" />
+              <point x="928.2499999999998" y="277.0" />
+              <point x="2093.3250000000003" y="277.0" />
+              <point x="-88.0" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.UserMessages" target="django.contrib.contenttypes.models.ContentType">
+              <point x="-85.66666666666674" y="-14.5" />
+              <point x="1815.1583333333333" y="178.0" />
+              <point x="1284.8250000000003" y="178.0" />
+              <point x="109.125" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.PossibleRentItems" target="buy_rent_barter_app.models.Advertisements">
+              <point x="0.0" y="-14.5" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.PossibleExchangeItems" target="buy_rent_barter_app.models.Advertisements">
+              <point x="0.0" y="-14.5" />
+              <point x="1422.7000000000003" y="287.0" />
+              <point x="2122.6583333333338" y="287.0" />
+              <point x="-58.666666666666515" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.ChainExchangeParticipantsAnswers" target="buy_rent_barter_app.models.PossibleChainExchange">
+              <point x="0.0" y="-14.5" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.RentRequestPriceOffers" target="buy_rent_barter_app.models.RentRequests">
+              <point x="0.0" y="-14.5" />
+              <point x="3969.625" y="450.0" />
+              <point x="4189.125" y="450.0" />
+              <point x="-63.5" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.ExchangeRequests" target="buy_rent_barter_app.models.PossibleExchangeItems">
+              <point x="-70.0" y="-14.5" />
+              <point x="3542.625" y="376.0" />
+              <point x="1524.3666666666668" y="376.0" />
+              <point x="101.66666666666652" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.BuyRequests" target="buy_rent_barter_app.models.Users">
+              <point x="-62.25" y="-14.5" />
+              <point x="803.7499999999998" y="89.0" />
+              <point x="1905.9797619047622" y="89.0" />
+              <point x="-37.67857142857133" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.Advertisements" target="buy_rent_barter_app.models.Users">
+              <point x="0.0" y="-14.5" />
+              <point x="2181.3250000000003" y="188.0" />
+              <point x="2147.8250000000003" y="188.0" />
+              <point x="2147.8250000000003" y="99.0" />
+              <point x="1966.2654761904764" y="99.0" />
+              <point x="22.60714285714289" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.AdItemBuyRentExchangeOnFinishingRankings" target="django.contrib.contenttypes.models.ContentType">
+              <point x="-141.33333333333348" y="-14.5" />
+              <point x="1398.9916666666668" y="188.0" />
+              <point x="1212.0750000000003" y="188.0" />
+              <point x="36.375" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.7079842931937173" x="159.0" y="362.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://Python/#C:/Users/Acer/Desktop/семестр88/App/buy_rent_barter_app/models.py">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Python</ID>
+          <OriginalElement>#C:/Users/Acer/Desktop/семестр88/App/buy_rent_barter_app/models.py</OriginalElement>
+          <nodes>
+            <node x="9173.0" y="288.0">buy_rent_barter_app.models.ComplainAnswers</node>
+            <node x="3660.0" y="288.0">buy_rent_barter_app.models.DesiredItemsDescriptionTags</node>
+            <node x="6731.0" y="288.0">buy_rent_barter_app.models.ChainExchangeWishes</node>
+            <node x="6028.0" y="288.0">buy_rent_barter_app.models.AdvertisementsItemsRentConditions</node>
+            <node x="8417.0" y="288.0">buy_rent_barter_app.models.AdvertisementsItemsPrices</node>
+            <node x="5662.0" y="288.0">buy_rent_barter_app.models.AdsItemsRentRequestsAnswers</node>
+            <node x="2459.0" y="288.0">buy_rent_barter_app.models.PossibleExchangeItems</node>
+            <node x="4438.0" y="288.0">buy_rent_barter_app.models.RentRequests</node>
+            <node x="4806.75" y="79.0">buy_rent_barter_app.models.UsersSocialNetworks</node>
+            <node x="326.0" y="288.0">buy_rent_barter_app.models.ChainExchangeParticipantsAnswers</node>
+            <node x="9470.0" y="288.0">buy_rent_barter_app.models.DesiredItemExistenceNotifications</node>
+            <node x="1060.0" y="288.0">buy_rent_barter_app.models.Complains</node>
+            <node x="5330.0" y="288.0">buy_rent_barter_app.models.DesiredAdsItemsQueries</node>
+            <node x="713.0" y="288.0">buy_rent_barter_app.models.AdsItemBuyRequestAnswer</node>
+            <node x="1934.0" y="288.0">buy_rent_barter_app.models.Images</node>
+            <node x="3361.0" y="288.0">buy_rent_barter_app.models.PossibleRentItems</node>
+            <node x="8760.0" y="288.0">buy_rent_barter_app.models.UsersAdvertisementsLocationsDistances</node>
+            <node x="4535.5" y="0.0">django.db.models.base.ModelBase</node>
+            <node x="2784.0" y="288.0">buy_rent_barter_app.models.UserMessages</node>
+            <node x="2175.0" y="288.0">buy_rent_barter_app.models.Advertisements</node>
+            <node x="3061.0" y="288.0">buy_rent_barter_app.models.ExchangeRequests</node>
+            <node x="7050.0" y="288.0">buy_rent_barter_app.models.RentRequestPriceOffers</node>
+            <node x="4018.0" y="288.0">buy_rent_barter_app.models.AdvertisementsItemsExchangeConditions</node>
+            <node x="7821.0" y="288.0">buy_rent_barter_app.models.BuyRequests</node>
+            <node x="6422.0" y="288.0">buy_rent_barter_app.models.AdvertisementsTags</node>
+            <node x="1319.0" y="288.0">buy_rent_barter_app.models.ExchangeRequestsPriceOffers</node>
+            <node x="4595.75" y="79.0">django.db.models.base.Model</node>
+            <node x="1677.0" y="288.0">buy_rent_barter_app.models.Donations</node>
+            <node x="4712.0" y="288.0">buy_rent_barter_app.models.Users</node>
+            <node x="8090.0" y="288.0">buy_rent_barter_app.models.FavoriteAdvertisements</node>
+            <node x="4943.0" y="288.0">buy_rent_barter_app.models.AdsItemExchangeRequestsAnswers</node>
+            <node x="4904.0" y="0.0">object</node>
+            <node x="7377.0" y="288.0">buy_rent_barter_app.models.AdItemBuyRentExchangeOnFinishingRankings</node>
+            <node x="0.0" y="288.0">buy_rent_barter_app.models.PossibleChainExchange</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="buy_rent_barter_app.models.ComplainAnswers" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="9311.5" y="138.0" />
+              <point x="4777.2" y="138.0" />
+              <point x="85.94999999999982" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.UsersSocialNetworks" target="object">
+              <point x="0.0" y="-14.5" />
+              <point x="16.25" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.UsersAdvertisementsLocationsDistances" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="8956.5" y="148.0" />
+              <point x="4770.833333333333" y="148.0" />
+              <point x="79.58333333333303" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.RentRequests" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="4565.0" y="268.0" />
+              <point x="4688.066666666667" y="268.0" />
+              <point x="-3.183333333333394" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.RentRequestPriceOffers" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="7203.5" y="198.0" />
+              <point x="4739.0" y="198.0" />
+              <point x="47.75" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.AdvertisementsItemsExchangeConditions" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="4218.0" y="258.0" />
+              <point x="4681.7" y="258.0" />
+              <point x="-9.550000000000182" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.DesiredItemExistenceNotifications" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="9652.0" y="128.0" />
+              <point x="4783.566666666667" y="128.0" />
+              <point x="92.3166666666666" y="14.5" />
+            </edge>
+            <edge source="django.db.models.base.Model" target="django.db.models.base.ModelBase">
+              <point x="-47.75" y="-14.5" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.UserMessages" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="2912.5" y="218.0" />
+              <point x="4656.233333333334" y="218.0" />
+              <point x="-35.016666666666424" y="14.5" />
+            </edge>
+            <edge source="django.db.models.base.Model" target="object">
+              <point x="47.75" y="-14.5" />
+              <point x="4739.0" y="54.0" />
+              <point x="4920.25" y="54.0" />
+              <point x="-16.25" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.PossibleChainExchange" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="153.0" y="128.0" />
+              <point x="4598.933333333333" y="128.0" />
+              <point x="-92.3166666666666" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.Complains" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="1179.5" y="158.0" />
+              <point x="4618.033333333334" y="158.0" />
+              <point x="-73.21666666666624" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.Donations" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="1795.5" y="178.0" />
+              <point x="4630.766666666666" y="178.0" />
+              <point x="-60.483333333333576" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.DesiredAdsItemsQueries" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="5486.0" y="248.0" />
+              <point x="4707.166666666667" y="248.0" />
+              <point x="15.91666666666697" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.AdsItemBuyRequestAnswer" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="876.5" y="148.0" />
+              <point x="4611.666666666667" y="148.0" />
+              <point x="-79.58333333333303" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.Images" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="2044.5" y="188.0" />
+              <point x="4637.133333333333" y="188.0" />
+              <point x="-54.11666666666679" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.Users" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="4817.5" y="268.0" />
+              <point x="4694.433333333333" y="268.0" />
+              <point x="3.183333333333394" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.ChainExchangeWishes" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="6880.5" y="208.0" />
+              <point x="4732.633333333333" y="208.0" />
+              <point x="41.38333333333321" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.AdItemBuyRentExchangeOnFinishingRankings" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="7589.0" y="188.0" />
+              <point x="4745.366666666667" y="188.0" />
+              <point x="54.11666666666679" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.AdvertisementsItemsPrices" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="8578.5" y="158.0" />
+              <point x="4764.466666666666" y="158.0" />
+              <point x="73.21666666666624" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.ExchangeRequests" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="3201.0" y="228.0" />
+              <point x="4662.6" y="228.0" />
+              <point x="-28.649999999999636" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.AdvertisementsItemsRentConditions" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="6215.0" y="228.0" />
+              <point x="4719.9" y="228.0" />
+              <point x="28.649999999999636" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.DesiredItemsDescriptionTags" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="3829.0" y="248.0" />
+              <point x="4675.333333333333" y="248.0" />
+              <point x="-15.91666666666697" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.ChainExchangeParticipantsAnswers" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="509.5" y="138.0" />
+              <point x="4605.3" y="138.0" />
+              <point x="-85.94999999999982" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.AdvertisementsTags" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="6566.5" y="218.0" />
+              <point x="4726.266666666666" y="218.0" />
+              <point x="35.016666666666424" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.AdsItemsRentRequestsAnswers" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="5835.0" y="238.0" />
+              <point x="4713.533333333333" y="238.0" />
+              <point x="22.28333333333285" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.FavoriteAdvertisements" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="8243.5" y="168.0" />
+              <point x="4758.1" y="168.0" />
+              <point x="66.85000000000036" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.Advertisements" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="2307.0" y="198.0" />
+              <point x="4643.5" y="198.0" />
+              <point x="-47.75" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.ExchangeRequestsPriceOffers" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="1488.0" y="168.0" />
+              <point x="4624.4" y="168.0" />
+              <point x="-66.85000000000036" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.PossibleRentItems" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="3500.5" y="238.0" />
+              <point x="4668.966666666666" y="238.0" />
+              <point x="-22.283333333333758" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.PossibleExchangeItems" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="2611.5" y="208.0" />
+              <point x="4649.866666666667" y="208.0" />
+              <point x="-41.38333333333321" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.BuyRequests" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="7945.5" y="178.0" />
+              <point x="4751.733333333334" y="178.0" />
+              <point x="60.483333333333576" y="14.5" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.AdsItemExchangeRequestsAnswers" target="django.db.models.base.Model">
+              <point x="0.0" y="-14.5" />
+              <point x="5126.5" y="258.0" />
+              <point x="4700.8" y="258.0" />
+              <point x="9.550000000000182" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.1" x="674.0" y="-949.0" />
+          <SelectedNodes>
+            <node>buy_rent_barter_app.models.PossibleChainExchange</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uu.py" />
+    <entry file="file://$PROJECT_DIR$/d.dot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="2673" column="33" selection-start-line="2673" selection-start-column="33" selection-end-line="2673" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/pydotplus/graphviz.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="488" column="19" selection-start-line="488" selection-start-column="4" selection-end-line="488" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotfile.dot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/model.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/spin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/leaflet.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/bcrypt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-end-line="3" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/i.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="66" column="3" selection-start-line="66" selection-start-column="3" selection-end-line="66" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp_models.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_project_visualized.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bcrypt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="e#99#120#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2108">
+          <caret line="124" column="8" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subscription-app/src/components/register/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subscription-app/src/components/register/register.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subscription-app/node_modules/eslint/bin/eslint.js" />
+    <entry file="file://$PROJECT_DIR$/subscription-app/src/components/HelloWorld.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subscription-app/node_modules/@vue/cli-plugin-eslint/index.js" />
+    <entry file="file://$PROJECT_DIR$/subscription-app/src/components/l.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subscription-app/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-918" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subscription-app/babel.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subscription-app/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subscription-app/node_modules/eslint-loader/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subscription-app/node_modules/eslint-loader/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subscription-app/src/components/login/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subscription-app/src/components/login/login.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="35" column="2" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
+          <folding>
+            <element signature="n#div#0;n#template#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subscription-app/src/store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#18#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subscription-app/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subscription-app/src/components/Create.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="79" column="21" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subscription-app/src/components/Edit.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subscription-app/src/components/Index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="12" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subscription-app/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="13" selection-start-line="1" selection-end-line="1" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subscription-app/src/components/navbar/navbar.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="e#1211#1257#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subscription-app/src/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#18#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subscription-app/src/components/search-bar/search-bar.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="53" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subscription-app/src/components/select_bar/select-bar.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subscription-app/src/components/three_select/three_select.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="49" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
