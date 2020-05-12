@@ -31,7 +31,7 @@ def login(request):
     return render()
 """
 
-from .models import Document
+#from .models import Document
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
@@ -63,6 +63,7 @@ def list1(request):
         print(type(i))
         print(i["images"])
         print(type(i["images"]))
+        """
         try:
             for j in i["images"]:
                 format, imgstr = j["path"].split(';base64,')
@@ -74,6 +75,7 @@ def list1(request):
         except Exception as E:
             print(E)
 
+        """
         """
         try:
             newdoc = Document(docfile=request.FILES['docfile'])

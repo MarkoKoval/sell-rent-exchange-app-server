@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Course</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/css/selectize.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.js"></script>
+</head>
+<style>
+    #forma{
+        margin: 20px 20px 20px 20px;
+    }
+    .invisible {
+    position: absolute;
+    left: -9999px;
+}
+    </style>
+
+<body>
+
+  <div class="form-group" invisible >
+    <label for="exampleInputPassword1">Course categories</label>
+    <input type="text"  id="exampleInputPassword1" name = "tags" placeholder="Enter category" >
+      <small id="emailHelp" class="form-text text-muted">course categories tags that will helpful for course promotion.</small>
+
+  </div>
+
+
+
+
+
+</form>
+
+            <script>
+                var t = "ggg";
+            var $select =  $('#exampleInputPassword1').selectize({
+                maxItems: 3,
+                color: "blue",
+                persist: false,
+                plugins: ['remove_button'],
+                values:[{text:'cat',value:'cat'},{text:'dog',value:'dog'},{text:'snake',value:'snake'}],
+                create: function(input) {
+
+                    return {
+                        value: input,
+                        text: input
+                    }
+                },
+                 createFilter: function(input) { return input.length <= 10 ; },
+                onChange: function(value) {
+                  alert(  typeof $('#exampleInputPassword1')[0].selectize.items);
+               }
+           });
+           $( document ).ready(function() {
+
+             $select[0].selectize.clear(); // Clear existing entries
+               for ( var i = 0 ; i < 1 ; i++ ) // data_source is a dynamic source of data
+               $select[ 0 ].selectize.createItem( "hello" , false ); // false means don't trigger dropdown
+
+                 $select[0].selectize.refreshOptions() ;
+    $select[0].selectize.addItem('First Item');
+               for (var i = 0; i < 100; i++) {
+                   var y = 'foo' + i.toString();
+                   $select[0].selectize.addOption({value: i, text: y});
+               }
+           });
+       </script>
+</body>
+</html>

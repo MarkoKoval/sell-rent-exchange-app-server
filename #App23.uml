@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DjangoModelDependency</ID>
+  <OriginalElement>#App</OriginalElement>
+  <nodes>
+    <node x="1855.531168831169" y="0.0">buy_rent_barter_app.models.Users</node>
+    <node x="463.0" y="121.5">buy_rent_barter_app.models.ProposalsTags</node>
+    <node x="3163.406168831169" y="424.0">buy_rent_barter_app.models.ProposalsItemsRequests</node>
+    <node x="1709.125" y="532.0">buy_rent_barter_app.models.UserMessages</node>
+    <node x="299.4627705627704" y="437.5">buy_rent_barter_app.models.DesiredItemsQueries</node>
+    <node x="1968.1760822510823" y="1526.0">buy_rent_barter_app.models.PossibleItems</node>
+    <node x="2579.999999999998" y="511.49999999999955">buy_rent_barter_app.models.ProposalsCategories</node>
+    <node x="1693.125" y="518.5">buy_rent_barter_app.models.Images</node>
+    <node x="139.63441558441582" y="1607.0">buy_rent_barter_app.models.DesiredItemExistenceNotifications</node>
+    <node x="2230.5" y="1088.0">django.contrib.contenttypes.models.ContentType</node>
+    <node x="3913.531168831169" y="81.0">buy_rent_barter_app.models.AdditionalRequestsOffers</node>
+    <node x="2410.406168831169" y="1539.5">buy_rent_barter_app.models.Complains</node>
+    <node x="1229.8377705627704" y="1593.5">buy_rent_barter_app.models.FavoriteProposals</node>
+    <node x="2641.379437229437" y="1856.0">buy_rent_barter_app.models.ComplainsAnswers</node>
+    <node x="4080.129437229437" y="1047.5">buy_rent_barter_app.models.ChainExchangeProposalsAnswers</node>
+    <node x="2795.406168831169" y="1553.0">buy_rent_barter_app.models.Reviews</node>
+    <node x="897.125" y="518.5">buy_rent_barter_app.models.Donations</node>
+    <node x="672.8377705627704" y="845.0">buy_rent_barter_app.models.Proposals</node>
+    <node x="3673.406168831169" y="451.0">buy_rent_barter_app.models.PossibleChainExchangeProposals</node>
+    <node x="3525.129437229437" y="1034.0">buy_rent_barter_app.models.ProposalItemsRequestsAnswers</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="buy_rent_barter_app.models.Proposals" target="buy_rent_barter_app.models.ProposalsTags">
+      <point x="0.0" y="-315.5" />
+      <point x="857.8377705627704" y="825.0" />
+      <point x="875.625" y="825.0" />
+      <point x="875.625" y="354.0" />
+      <point x="758.5" y="354.0" />
+      <point x="98.5" y="45.5" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.ChainExchangeProposalsAnswers" target="buy_rent_barter_app.models.PossibleChainExchangeProposals">
+      <point x="-137.25" y="-113.0" />
+      <point x="4217.379437229437" y="815.0" />
+      <point x="3945.906168831169" y="815.0" />
+      <point x="0.0" y="153.5" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.ChainExchangeProposalsAnswers" target="buy_rent_barter_app.models.AdditionalRequestsOffers">
+      <point x="137.25" y="-113.0" />
+      <point x="4491.879437229437" y="825.0" />
+      <point x="4501.629437229437" y="825.0" />
+      <point x="4501.629437229437" y="404.0" />
+      <point x="4337.0311688311685" y="404.0" />
+      <point x="181.5" y="86.0" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.Proposals" target="buy_rent_barter_app.models.Images">
+      <point x="148.0" y="-315.5" />
+      <point x="1005.8377705627704" y="825.0" />
+      <point x="1863.125" y="825.0" />
+      <point x="0.0" y="86.0" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.ProposalItemsRequestsAnswers" target="buy_rent_barter_app.models.ProposalsItemsRequests">
+      <point x="-133.75" y="-126.5" />
+      <point x="3658.879437229437" y="825.0" />
+      <point x="3401.406168831169" y="825.0" />
+      <point x="0.0" y="180.5" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.PossibleItems" target="buy_rent_barter_app.models.Proposals">
+      <point x="-97.75" y="-140.0" />
+      <point x="2065.9260822510823" y="1496.0" />
+      <point x="981.1711038961037" y="1496.0" />
+      <point x="123.33333333333326" y="315.5" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.Donations" target="buy_rent_barter_app.models.Users">
+      <point x="0.0" y="-86.0" />
+      <point x="1078.125" y="384.0" />
+      <point x="1954.3948051948053" y="384.0" />
+      <point x="-118.63636363636374" y="167.0" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.PossibleItems" target="django.contrib.contenttypes.models.ContentType">
+      <point x="97.75" y="-140.0" />
+      <point x="2261.4260822510823" y="1506.0" />
+      <point x="2303.3333333333335" y="1506.0" />
+      <point x="-145.66666666666652" y="72.5" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.Proposals" target="buy_rent_barter_app.models.Users">
+      <point x="74.0" y="-315.5" />
+      <point x="931.8377705627704" y="825.0" />
+      <point x="886.625" y="825.0" />
+      <point x="886.625" y="374.0" />
+      <point x="1914.8493506493508" y="374.0" />
+      <point x="-158.18181818181824" y="167.0" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.ProposalItemsRequestsAnswers" target="buy_rent_barter_app.models.AdditionalRequestsOffers">
+      <point x="133.75" y="-126.5" />
+      <point x="3926.379437229437" y="825.0" />
+      <point x="4228.9061688311685" y="825.0" />
+      <point x="4228.9061688311685" y="404.0" />
+      <point x="4216.0311688311685" y="404.0" />
+      <point x="60.5" y="86.0" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.ComplainsAnswers" target="buy_rent_barter_app.models.Users">
+      <point x="108.0" y="-113.0" />
+      <point x="2965.379437229437" y="1831.0" />
+      <point x="3152.906168831169" y="1831.0" />
+      <point x="3152.906168831169" y="384.0" />
+      <point x="2191.6675324675325" y="384.0" />
+      <point x="118.63636363636351" y="167.0" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.Complains" target="buy_rent_barter_app.models.Users">
+      <point x="91.25" y="-126.5" />
+      <point x="2684.156168831169" y="1506.0" />
+      <point x="2686.4166666666665" y="1506.0" />
+      <point x="2686.4166666666665" y="404.0" />
+      <point x="2112.5766233766235" y="404.0" />
+      <point x="39.545454545454504" y="167.0" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.ComplainsAnswers" target="buy_rent_barter_app.models.Complains">
+      <point x="-108.0" y="-113.0" />
+      <point x="2749.379437229437" y="1831.0" />
+      <point x="2592.906168831169" y="1831.0" />
+      <point x="0.0" y="126.5" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.FavoriteProposals" target="buy_rent_barter_app.models.Users">
+      <point x="106.0" y="-72.5" />
+      <point x="1547.8377705627704" y="1506.0" />
+      <point x="2043.625" y="1506.0" />
+      <point x="2043.625" y="404.0" />
+      <point x="2073.031168831169" y="404.0" />
+      <point x="0.0" y="167.0" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.DesiredItemsQueries" target="buy_rent_barter_app.models.Users">
+      <point x="150.0" y="-167.0" />
+      <point x="674.4627705627704" y="364.0" />
+      <point x="1875.3038961038962" y="364.0" />
+      <point x="-197.72727272727275" y="167.0" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.UserMessages" target="buy_rent_barter_app.models.Users">
+      <point x="0.0" y="-72.5" />
+      <point x="1476.125" y="394.0" />
+      <point x="1993.94025974026" y="394.0" />
+      <point x="-79.09090909090901" y="167.0" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.Reviews" target="buy_rent_barter_app.models.Users">
+      <point x="86.75" y="-113.0" />
+      <point x="3055.656168831169" y="394.0" />
+      <point x="2152.122077922078" y="394.0" />
+      <point x="79.09090909090901" y="167.0" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.ProposalsItemsRequests" target="buy_rent_barter_app.models.AdditionalRequestsOffers">
+      <point x="119.0" y="-180.5" />
+      <point x="3520.406168831169" y="404.0" />
+      <point x="3974.031168831169" y="404.0" />
+      <point x="-181.5" y="86.0" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.PossibleChainExchangeProposals" target="buy_rent_barter_app.models.AdditionalRequestsOffers">
+      <point x="136.25" y="-153.5" />
+      <point x="4082.156168831169" y="404.0" />
+      <point x="4095.031168831169" y="404.0" />
+      <point x="-60.5" y="86.0" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.DesiredItemExistenceNotifications" target="buy_rent_barter_app.models.Proposals">
+      <point x="139.25" y="-59.0" />
+      <point x="557.3844155844158" y="1506.0" />
+      <point x="734.5044372294369" y="1506.0" />
+      <point x="-123.33333333333337" y="315.5" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.PossibleChainExchangeProposals" target="buy_rent_barter_app.models.Users">
+      <point x="-136.25" y="-153.5" />
+      <point x="3809.656168831169" y="364.0" />
+      <point x="2270.758441558442" y="364.0" />
+      <point x="197.72727272727298" y="167.0" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.Images" target="buy_rent_barter_app.models.Users">
+      <point x="0.0" y="-86.0" />
+      <point x="1863.125" y="404.0" />
+      <point x="2033.4857142857145" y="404.0" />
+      <point x="-39.545454545454504" y="167.0" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.ProposalsItemsRequests" target="buy_rent_barter_app.models.Users">
+      <point x="-119.0" y="-180.5" />
+      <point x="3282.406168831169" y="374.0" />
+      <point x="2231.212987012987" y="374.0" />
+      <point x="158.18181818181802" y="167.0" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.Complains" target="django.contrib.contenttypes.models.ContentType">
+      <point x="-91.25" y="-126.5" />
+      <point x="2501.656168831169" y="1506.0" />
+      <point x="2449.0" y="1506.0" />
+      <point x="0.0" y="72.5" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.FavoriteProposals" target="buy_rent_barter_app.models.Proposals">
+      <point x="-106.0" y="-72.5" />
+      <point x="1335.8377705627704" y="1506.0" />
+      <point x="857.8377705627704" y="1506.0" />
+      <point x="0.0" y="315.5" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.Proposals" target="buy_rent_barter_app.models.DesiredItemsQueries">
+      <point x="-74.0" y="-315.5" />
+      <point x="783.8377705627704" y="805.0" />
+      <point x="636.9627705627704" y="805.0" />
+      <point x="112.5" y="167.0" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.DesiredItemExistenceNotifications" target="buy_rent_barter_app.models.DesiredItemsQueries">
+      <point x="-139.25" y="-59.0" />
+      <point x="278.8844155844158" y="1506.0" />
+      <point x="305.80108225108233" y="1506.0" />
+      <point x="305.80108225108233" y="825.0" />
+      <point x="411.9627705627704" y="825.0" />
+      <point x="-112.5" y="167.0" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.DesiredItemsQueries" target="buy_rent_barter_app.models.ProposalsCategories">
+      <point x="-150.0" y="-167.0" />
+      <point x="374.4627705627704" y="404.0" />
+      <point x="332.25" y="404.0" />
+      <point x="110.75" y="45.5" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.Reviews" target="django.contrib.contenttypes.models.ContentType">
+      <point x="-86.75" y="-113.0" />
+      <point x="2882.156168831169" y="1496.0" />
+      <point x="2594.6666666666665" y="1496.0" />
+      <point x="145.66666666666652" y="72.5" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.DesiredItemsQueries" target="buy_rent_barter_app.models.ProposalsTags">
+      <point x="0.0" y="-167.0" />
+      <point x="524.4627705627704" y="404.0" />
+      <point x="561.5" y="404.0" />
+      <point x="-98.5" y="45.5" />
+    </edge>
+    <edge source="buy_rent_barter_app.models.Proposals" target="buy_rent_barter_app.models.ProposalsCategories">
+      <point x="-148.0" y="-315.5" />
+      <point x="709.8377705627704" y="815.0" />
+      <point x="178.75" y="815.0" />
+      <point x="178.75" y="404.0" />
+      <point x="110.75" y="404.0" />
+      <point x="-110.75" y="45.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.10000000000000005" x="1908.0781555846083" y="428.5124298315968" />
+  <SelectedNodes>
+    <node>buy_rent_barter_app.models.UserMessages</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+  </Categories>
+</Diagram>
+

@@ -1,7 +1,7 @@
 digraph model_graph {
   // Dotfile by Django-Extensions graph_models
-  // Created: 2020-05-07 18:41
-  // Cli Options: -a -X Permission,PermissionMixin,Group,AbstractUser,User,AbstractBaseUser,LogEntry,Session,AbstractBaseSession -o my_project.dot
+  // Created: 2020-04-29 16:22
+  // Cli Options: -a -X Permission,PermissionMixin,Group,AbstractUser,User,AbstractBaseUser,LogEntry,Session,AbstractBaseSession,Document -o my_project1.dot
 
   fontname = "Roboto"
   fontsize = 8
@@ -129,6 +129,14 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Roboto">last_time_visited</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Roboto">DateTimeField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
       <FONT COLOR="#7B7B7B" FACE="Roboto">name</FONT>
       </TD><TD ALIGN="LEFT">
       <FONT COLOR="#7B7B7B" FACE="Roboto">CharField</FONT>
@@ -161,9 +169,9 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT COLOR="#7B7B7B" FACE="Roboto">time_entered</FONT>
+      <FONT FACE="Roboto">show_profile_for_all</FONT>
       </TD><TD ALIGN="LEFT">
-      <FONT COLOR="#7B7B7B" FACE="Roboto">DateTimeField</FONT>
+      <FONT FACE="Roboto">BooleanField</FONT>
       </TD></TR>
     
     
@@ -175,32 +183,6 @@ digraph model_graph {
       <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
       <FONT FACE="Roboto" COLOR="white" POINT-SIZE="10"><B>
       ProposalsTags
-      </B></FONT></TD></TR>
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto"><B>id</B></FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto"><B>AutoField</B></FONT>
-      </TD></TR>
-    
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT COLOR="#7B7B7B" FACE="Roboto">title</FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT COLOR="#7B7B7B" FACE="Roboto">CharField</FONT>
-      </TD></TR>
-    
-    
-      </TABLE>
-      >]
-  
-    buy_rent_barter_app_models_ProposalsCategories [label=<
-      <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
-      <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
-      <FONT FACE="Roboto" COLOR="white" POINT-SIZE="10"><B>
-      ProposalsCategories
       </B></FONT></TD></TR>
     
     
@@ -289,7 +271,7 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto"><B>category</B></FONT>
+      <FONT FACE="Roboto"><B>creator_id</B></FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
       </TD></TR>
@@ -297,9 +279,9 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto"><B>creator_id</B></FONT>
+      <FONT FACE="Roboto">ad_item_description_content_hashcode</FONT>
       </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
+      <FONT FACE="Roboto">CharField</FONT>
       </TD></TR>
     
     
@@ -332,22 +314,6 @@ digraph model_graph {
       <FONT FACE="Roboto">is_blocked_by_admin</FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto">BooleanField</FONT>
-      </TD></TR>
-    
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">item_price_currency</FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto">CharField</FONT>
-      </TD></TR>
-    
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">item_price_value</FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto">FloatField</FONT>
       </TD></TR>
     
     
@@ -393,9 +359,9 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">rent_time_unit_measure</FONT>
+      <FONT FACE="Roboto">set_email_notification</FONT>
       </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto">CharField</FONT>
+      <FONT FACE="Roboto">BooleanField</FONT>
       </TD></TR>
     
     
@@ -420,6 +386,106 @@ digraph model_graph {
       <FONT FACE="Roboto">total_items</FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto">IntegerField</FONT>
+      </TD></TR>
+    
+    
+      </TABLE>
+      >]
+  
+    buy_rent_barter_app_models_ProposalsItemsGetConditions [label=<
+      <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
+      <FONT FACE="Roboto" COLOR="white" POINT-SIZE="10"><B>
+      ProposalsItemsGetConditions
+      </B></FONT></TD></TR>
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto"><B>id</B></FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto"><B>AutoField</B></FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto"><B>proposal_id</B></FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto"><B>OneToOneField (id)</B></FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">description</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">TextField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">item_price_currency</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">CharField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">item_price_value</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">FloatField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">rent_time_unit_measure</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">CharField</FONT>
+      </TD></TR>
+    
+    
+      </TABLE>
+      >]
+  
+    buy_rent_barter_app_models_UsersProposalsLocationsDistances [label=<
+      <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
+      <FONT FACE="Roboto" COLOR="white" POINT-SIZE="10"><B>
+      UsersProposalsLocationsDistances
+      </B></FONT></TD></TR>
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto"><B>id</B></FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto"><B>AutoField</B></FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto"><B>proposal_id</B></FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto"><B>user_id</B></FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">distance_in_km</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">FloatField</FONT>
       </TD></TR>
     
     
@@ -467,6 +533,14 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">description</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">TextField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
       <FONT FACE="Roboto">visible_for_others</FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto">BooleanField</FONT>
@@ -493,14 +567,6 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto"><B>category</B></FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
-      </TD></TR>
-    
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
       <FONT FACE="Roboto"><B>query_creator_id</B></FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
@@ -509,7 +575,7 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">is_active</FONT>
+      <FONT FACE="Roboto">notify_on_email</FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto">BooleanField</FONT>
       </TD></TR>
@@ -566,6 +632,32 @@ digraph model_graph {
       </TABLE>
       >]
   
+    buy_rent_barter_app_models_DesiredItemsDescriptionTags [label=<
+      <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
+      <FONT FACE="Roboto" COLOR="white" POINT-SIZE="10"><B>
+      DesiredItemsDescriptionTags
+      </B></FONT></TD></TR>
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto"><B>id</B></FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto"><B>AutoField</B></FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Roboto">title</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Roboto">CharField</FONT>
+      </TD></TR>
+    
+    
+      </TABLE>
+      >]
+  
     buy_rent_barter_app_models_DesiredItemExistenceNotifications [label=<
       <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
       <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
@@ -608,56 +700,6 @@ digraph model_graph {
       </TABLE>
       >]
   
-    buy_rent_barter_app_models_AdditionalRequestsOffers [label=<
-      <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
-      <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
-      <FONT FACE="Roboto" COLOR="white" POINT-SIZE="10"><B>
-      AdditionalRequestsOffers
-      </B></FONT></TD></TR>
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto"><B>id</B></FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto"><B>AutoField</B></FONT>
-      </TD></TR>
-    
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">description</FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto">TextField</FONT>
-      </TD></TR>
-    
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">offer_type</FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto">CharField</FONT>
-      </TD></TR>
-    
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">suggested_currency</FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto">CharField</FONT>
-      </TD></TR>
-    
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">suggested_money_count</FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto">FloatField</FONT>
-      </TD></TR>
-    
-    
-      </TABLE>
-      >]
-  
     buy_rent_barter_app_models_ProposalsItemsRequests [label=<
       <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
       <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
@@ -675,17 +717,25 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto"><B>additional_money_offers</B></FONT>
+      <FONT FACE="Roboto"><B>request_user_id</B></FONT>
       </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto"><B>OneToOneField (id)</B></FONT>
+      <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
       </TD></TR>
     
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto"><B>request_user_id</B></FONT>
+      <FONT FACE="Roboto">confirm_requested_subject_get_action</FONT>
       </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
+      <FONT FACE="Roboto">DateTimeField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">notify_on_email</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">BooleanField</FONT>
       </TD></TR>
     
     
@@ -699,9 +749,25 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">request_info_hashcode</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">CharField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
       <FONT FACE="Roboto">request_message</FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto">TextField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">request_subject_done</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">DateTimeField</FONT>
       </TD></TR>
     
     
@@ -723,15 +789,7 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">requested_object_received</FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto">DateTimeField</FONT>
-      </TD></TR>
-    
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">total_accept_approve_answer</FONT>
+      <FONT FACE="Roboto">request_watched</FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto">DateTimeField</FONT>
       </TD></TR>
@@ -765,39 +823,15 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto"><B>topic_content_type</B></FONT>
+      <FONT FACE="Roboto">confirmed_by_another_time</FONT>
       </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
+      <FONT FACE="Roboto">DateTimeField</FONT>
       </TD></TR>
     
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">accepted_for_deal</FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto">BooleanField</FONT>
-      </TD></TR>
-    
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">object_id</FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto">PositiveIntegerField</FONT>
-      </TD></TR>
-    
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">on_rent_time_unit_count</FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto">IntegerField</FONT>
-      </TD></TR>
-    
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">on_rent_time_unit_measure</FONT>
+      <FONT FACE="Roboto">info_hashcode</FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto">CharField</FONT>
       </TD></TR>
@@ -813,9 +847,91 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">waited_for_deal</FONT>
+      <FONT FACE="Roboto">rent_time_unit_count</FONT>
       </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto">BooleanField</FONT>
+      <FONT FACE="Roboto">IntegerField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">rent_time_unit_measure</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">CharField</FONT>
+      </TD></TR>
+    
+    
+      </TABLE>
+      >]
+  
+    buy_rent_barter_app_models_AdditionalRequestsOffers [label=<
+      <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
+      <FONT FACE="Roboto" COLOR="white" POINT-SIZE="10"><B>
+      AdditionalRequestsOffers
+      </B></FONT></TD></TR>
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto"><B>id</B></FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto"><B>AutoField</B></FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto"><B>rent_request</B></FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">description</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">TextField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">exchange_type</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">CharField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Roboto">offer_time</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Roboto">DateTimeField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">offer_type</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">CharField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">suggested_currency</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">CharField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">suggested_price</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">FloatField</FONT>
       </TD></TR>
     
     
@@ -839,17 +955,9 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto"><B>additional_money_offers</B></FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
-      </TD></TR>
-    
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
       <FONT FACE="Roboto"><B>request_id</B></FONT>
       </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto"><B>OneToOneField (id)</B></FONT>
+      <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
       </TD></TR>
     
     
@@ -879,7 +987,7 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">back_answer_deadline</FONT>
+      <FONT FACE="Roboto">answer_watched</FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto">DateTimeField</FONT>
       </TD></TR>
@@ -887,7 +995,23 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">confirm_requested_object_give_action</FONT>
+      <FONT FACE="Roboto">approve_accepted_time_for_requested_user</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">DateTimeField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">approve_deadline_for_requested_user</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">DateTimeField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">confirm_requested_subject_give_action</FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto">DateTimeField</FONT>
       </TD></TR>
@@ -908,14 +1032,6 @@ digraph model_graph {
       <FONT FACE="Roboto"><B>id</B></FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto"><B>AutoField</B></FONT>
-      </TD></TR>
-    
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto"><B>additional_money_offers</B></FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
       </TD></TR>
     
     
@@ -953,17 +1069,9 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">proposal_message</FONT>
+      <FONT FACE="Roboto">previous_block_info_hashcode</FONT>
       </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto">TextField</FONT>
-      </TD></TR>
-    
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">reject_proposal_at_all</FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto">DateTimeField</FONT>
+      <FONT FACE="Roboto">CharField</FONT>
       </TD></TR>
     
     
@@ -987,17 +1095,9 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto"><B>additional_money_offers</B></FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
-      </TD></TR>
-    
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
       <FONT FACE="Roboto"><B>chain_exchange_block_id</B></FONT>
       </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto"><B>OneToOneField (id)</B></FONT>
+      <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
       </TD></TR>
     
     
@@ -1006,6 +1106,64 @@ digraph model_graph {
       <FONT FACE="Roboto">accept_exchange_conditions</FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto">BooleanField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">answer_deadline_for_next_chain_exchanger</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">DateTimeField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">answer_message</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">TextField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">answer_next_chain_exchanger_watched</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">DateTimeField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Roboto">answer_time</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Roboto">DateTimeField</FONT>
+      </TD></TR>
+    
+    
+      </TABLE>
+      >]
+  
+    buy_rent_barter_app_models_ExchangeWishes [label=<
+      <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
+      <FONT FACE="Roboto" COLOR="white" POINT-SIZE="10"><B>
+      ExchangeWishes
+      </B></FONT></TD></TR>
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto"><B>id</B></FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto"><B>AutoField</B></FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto"><B>chain_exchange_answer</B></FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
       </TD></TR>
     
     
@@ -1027,20 +1185,44 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">back_deadline_answer</FONT>
+      <FONT FACE="Roboto">answer_watched</FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto">DateTimeField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">approve_accepted</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">DateTimeField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">approve_deadline_for_previous</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">DateTimeField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">exchange_type</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">CharField</FONT>
       </TD></TR>
     
     
       </TABLE>
       >]
   
-    buy_rent_barter_app_models_Reviews [label=<
+    buy_rent_barter_app_models_FinishingRankings [label=<
       <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
       <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
       <FONT FACE="Roboto" COLOR="white" POINT-SIZE="10"><B>
-      Reviews
+      FinishingRankings
       </B></FONT></TD></TR>
     
     
@@ -1053,7 +1235,7 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto"><B>review_object</B></FONT>
+      <FONT FACE="Roboto"><B>request_answer_id</B></FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
       </TD></TR>
@@ -1069,17 +1251,17 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">object_id</FONT>
+      <FONT FACE="Roboto">ranking_subject_type</FONT>
       </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto">PositiveIntegerField</FONT>
+      <FONT FACE="Roboto">CharField</FONT>
       </TD></TR>
     
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">review_mark</FONT>
+      <FONT FACE="Roboto">review_ranking</FONT>
       </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto">CharField</FONT>
+      <FONT FACE="Roboto">FloatField</FONT>
       </TD></TR>
     
     
@@ -1119,7 +1301,7 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto"><B>user_receiver_id</B></FONT>
+      <FONT FACE="Roboto"><B>message_sender_id</B></FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
       </TD></TR>
@@ -1127,7 +1309,7 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto"><B>user_sender_id</B></FONT>
+      <FONT FACE="Roboto"><B>topic_id</B></FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
       </TD></TR>
@@ -1146,6 +1328,14 @@ digraph model_graph {
       <FONT COLOR="#7B7B7B" FACE="Roboto">time_send</FONT>
       </TD><TD ALIGN="LEFT">
       <FONT COLOR="#7B7B7B" FACE="Roboto">DateTimeField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">topic_type</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">CharField</FONT>
       </TD></TR>
     
     
@@ -1177,7 +1367,7 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto"><B>topic_content_type</B></FONT>
+      <FONT FACE="Roboto"><B>subject_user</B></FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
       </TD></TR>
@@ -1185,7 +1375,15 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">complain_text</FONT>
+      <FONT FACE="Roboto"><B>topic_id</B></FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">complain_description_text</FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto">TextField</FONT>
       </TD></TR>
@@ -1201,9 +1399,9 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">object_id</FONT>
+      <FONT FACE="Roboto">resolved</FONT>
       </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto">PositiveIntegerField</FONT>
+      <FONT FACE="Roboto">BooleanField</FONT>
       </TD></TR>
     
     
@@ -1218,11 +1416,11 @@ digraph model_graph {
       </TABLE>
       >]
   
-    buy_rent_barter_app_models_ComplainsAnswers [label=<
+    buy_rent_barter_app_models_ComplainAnswers [label=<
       <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
       <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
       <FONT FACE="Roboto" COLOR="white" POINT-SIZE="10"><B>
-      ComplainsAnswers
+      ComplainAnswers
       </B></FONT></TD></TR>
     
     
@@ -1235,7 +1433,7 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto"><B>arbiter</B></FONT>
+      <FONT FACE="Roboto"><B>arbiter_to_resolve</B></FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
       </TD></TR>
@@ -1246,14 +1444,6 @@ digraph model_graph {
       <FONT FACE="Roboto"><B>complain_id</B></FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
-      </TD></TR>
-    
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">answer_text</FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto">TextField</FONT>
       </TD></TR>
     
     
@@ -1275,6 +1465,14 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">arbiter_verdict</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">TextField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
       <FONT FACE="Roboto">sanction</FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto">CharField</FONT>
@@ -1283,7 +1481,7 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">sanction_deadline</FONT>
+      <FONT FACE="Roboto">sanction_time_available</FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto">DateTimeField</FONT>
       </TD></TR>
@@ -1359,9 +1557,6 @@ digraph model_graph {
   buy_rent_barter_app_models_Images -> buy_rent_barter_app_models_Users
   [label=" uploader_user_id (images)"] [arrowhead=none, arrowtail=dot, dir=both];
 
-  buy_rent_barter_app_models_Proposals -> buy_rent_barter_app_models_ProposalsCategories
-  [label=" category (proposals)"] [arrowhead=none, arrowtail=dot, dir=both];
-
   buy_rent_barter_app_models_Proposals -> buy_rent_barter_app_models_Users
   [label=" creator_id (proposals)"] [arrowhead=none, arrowtail=dot, dir=both];
 
@@ -1371,8 +1566,17 @@ digraph model_graph {
   buy_rent_barter_app_models_Proposals -> buy_rent_barter_app_models_ProposalsTags
   [label=" search_tags (proposals_tags)"] [arrowhead=dot arrowtail=dot, dir=both];
 
-  buy_rent_barter_app_models_Proposals -> buy_rent_barter_app_models_DesiredItemsQueries
+  buy_rent_barter_app_models_ProposalsItemsGetConditions -> buy_rent_barter_app_models_Proposals
+  [label=" proposal_id (proposalsitemsgetconditions)"] [arrowhead=none, arrowtail=none, dir=both];
+
+  buy_rent_barter_app_models_ProposalsItemsGetConditions -> buy_rent_barter_app_models_DesiredItemsQueries
   [label=" wished_items (desired_items)"] [arrowhead=dot arrowtail=dot, dir=both];
+
+  buy_rent_barter_app_models_UsersProposalsLocationsDistances -> buy_rent_barter_app_models_Proposals
+  [label=" proposal_id (usersproposalslocationsdistances)"] [arrowhead=none, arrowtail=dot, dir=both];
+
+  buy_rent_barter_app_models_UsersProposalsLocationsDistances -> buy_rent_barter_app_models_Users
+  [label=" user_id (usersproposalslocationsdistances)"] [arrowhead=none, arrowtail=dot, dir=both];
 
   buy_rent_barter_app_models_FavoriteProposals -> buy_rent_barter_app_models_Proposals
   [label=" favorite_proposal_id (favoriteproposals)"] [arrowhead=none, arrowtail=dot, dir=both];
@@ -1383,10 +1587,7 @@ digraph model_graph {
   buy_rent_barter_app_models_DesiredItemsQueries -> buy_rent_barter_app_models_Users
   [label=" query_creator_id (desireditemsqueries)"] [arrowhead=none, arrowtail=dot, dir=both];
 
-  buy_rent_barter_app_models_DesiredItemsQueries -> buy_rent_barter_app_models_ProposalsCategories
-  [label=" category (desireditemsqueries)"] [arrowhead=none, arrowtail=dot, dir=both];
-
-  buy_rent_barter_app_models_DesiredItemsQueries -> buy_rent_barter_app_models_ProposalsTags
+  buy_rent_barter_app_models_DesiredItemsQueries -> buy_rent_barter_app_models_DesiredItemsDescriptionTags
   [label=" query_description_tags (desire_item_description_tags)"] [arrowhead=dot arrowtail=dot, dir=both];
 
   buy_rent_barter_app_models_DesiredItemExistenceNotifications -> buy_rent_barter_app_models_DesiredItemsQueries
@@ -1398,56 +1599,71 @@ digraph model_graph {
   buy_rent_barter_app_models_ProposalsItemsRequests -> buy_rent_barter_app_models_Users
   [label=" request_user_id (proposalsitemsrequests)"] [arrowhead=none, arrowtail=dot, dir=both];
 
-  buy_rent_barter_app_models_ProposalsItemsRequests -> buy_rent_barter_app_models_AdditionalRequestsOffers
-  [label=" additional_money_offers (proposalsitemsrequests)"] [arrowhead=none, arrowtail=none, dir=both];
+  buy_rent_barter_app_models_ProposalsItemsRequests -> buy_rent_barter_app_models_PossibleItems
+  [label=" requested_items (requested_items)"] [arrowhead=dot arrowtail=dot, dir=both];
+
+  buy_rent_barter_app_models_ProposalsItemsRequests -> buy_rent_barter_app_models_PossibleItems
+  [label=" suggested_items (suggested_items)"] [arrowhead=dot arrowtail=dot, dir=both];
 
   buy_rent_barter_app_models_PossibleItems -> buy_rent_barter_app_models_Proposals
   [label=" proposal_item_id (possibleitems)"] [arrowhead=none, arrowtail=dot, dir=both];
 
-  buy_rent_barter_app_models_PossibleItems -> django_contrib_contenttypes_models_ContentType
-  [label=" topic_content_type (possibleitems)"] [arrowhead=none, arrowtail=dot, dir=both];
+  buy_rent_barter_app_models_AdditionalRequestsOffers -> django_contrib_contenttypes_models_ContentType
+  [label=" rent_request (additionalrequestsoffers)"] [arrowhead=none, arrowtail=dot, dir=both];
 
   buy_rent_barter_app_models_ProposalItemsRequestsAnswers -> buy_rent_barter_app_models_ProposalsItemsRequests
-  [label=" request_id (proposalitemsrequestsanswers)"] [arrowhead=none, arrowtail=none, dir=both];
-
-  buy_rent_barter_app_models_ProposalItemsRequestsAnswers -> buy_rent_barter_app_models_AdditionalRequestsOffers
-  [label=" additional_money_offers (proposalitemsrequestsanswers)"] [arrowhead=none, arrowtail=dot, dir=both];
+  [label=" request_id (proposalitemsrequestsanswers)"] [arrowhead=none, arrowtail=dot, dir=both];
 
   buy_rent_barter_app_models_PossibleChainExchangeProposals -> buy_rent_barter_app_models_Users
   [label=" user_id (possiblechainexchangeproposals)"] [arrowhead=none, arrowtail=dot, dir=both];
 
-  buy_rent_barter_app_models_PossibleChainExchangeProposals -> buy_rent_barter_app_models_AdditionalRequestsOffers
-  [label=" additional_money_offers (possiblechainexchangeproposals)"] [arrowhead=none, arrowtail=dot, dir=both];
+  buy_rent_barter_app_models_PossibleChainExchangeProposals -> buy_rent_barter_app_models_PossibleItems
+  [label=" chain_exchange_proposal_items (items_for_chain_exchange)"] [arrowhead=dot arrowtail=dot, dir=both];
 
   buy_rent_barter_app_models_ChainExchangeProposalsAnswers -> buy_rent_barter_app_models_PossibleChainExchangeProposals
-  [label=" chain_exchange_block_id (chainexchangeproposalsanswers)"] [arrowhead=none, arrowtail=none, dir=both];
+  [label=" chain_exchange_block_id (chainexchangeproposalsanswers)"] [arrowhead=none, arrowtail=dot, dir=both];
 
-  buy_rent_barter_app_models_ChainExchangeProposalsAnswers -> buy_rent_barter_app_models_AdditionalRequestsOffers
-  [label=" additional_money_offers (chainexchangeproposalsanswers)"] [arrowhead=none, arrowtail=dot, dir=both];
+  buy_rent_barter_app_models_ExchangeWishes -> django_contrib_contenttypes_models_ContentType
+  [label=" chain_exchange_answer (exchangewishes)"] [arrowhead=none, arrowtail=dot, dir=both];
 
-  buy_rent_barter_app_models_Reviews -> buy_rent_barter_app_models_Users
-  [label=" reviewer_id (reviews)"] [arrowhead=none, arrowtail=dot, dir=both];
+  buy_rent_barter_app_models_ExchangeWishes -> buy_rent_barter_app_models_PossibleItems
+  [label=" wanted_items_for_chain_exchange (wanted_items_for_chain_exchange)"] [arrowhead=dot arrowtail=dot, dir=both];
 
-  buy_rent_barter_app_models_Reviews -> django_contrib_contenttypes_models_ContentType
-  [label=" review_object (reviews)"] [arrowhead=none, arrowtail=dot, dir=both];
+  buy_rent_barter_app_models_FinishingRankings -> django_contrib_contenttypes_models_ContentType
+  [label=" request_answer_id (finishingrankings)"] [arrowhead=none, arrowtail=dot, dir=both];
+
+  buy_rent_barter_app_models_FinishingRankings -> buy_rent_barter_app_models_Users
+  [label=" reviewer_id (finishingrankings)"] [arrowhead=none, arrowtail=dot, dir=both];
+
+  buy_rent_barter_app_models_FinishingRankings -> buy_rent_barter_app_models_Images
+  [label=" review_description_images (review_images)"] [arrowhead=dot arrowtail=dot, dir=both];
 
   buy_rent_barter_app_models_UserMessages -> buy_rent_barter_app_models_Users
-  [label=" user_sender_id (user_sender_id)"] [arrowhead=none, arrowtail=dot, dir=both];
+  [label=" message_sender_id (usermessages)"] [arrowhead=none, arrowtail=dot, dir=both];
 
-  buy_rent_barter_app_models_UserMessages -> buy_rent_barter_app_models_Users
-  [label=" user_receiver_id (user_receiver_id)"] [arrowhead=none, arrowtail=dot, dir=both];
+  buy_rent_barter_app_models_UserMessages -> django_contrib_contenttypes_models_ContentType
+  [label=" topic_id (usermessages)"] [arrowhead=none, arrowtail=dot, dir=both];
+
+  buy_rent_barter_app_models_UserMessages -> buy_rent_barter_app_models_Images
+  [label=" description_images (description_images)"] [arrowhead=dot arrowtail=dot, dir=both];
 
   buy_rent_barter_app_models_Complains -> django_contrib_contenttypes_models_ContentType
-  [label=" topic_content_type (complains)"] [arrowhead=none, arrowtail=dot, dir=both];
+  [label=" topic_id (complains)"] [arrowhead=none, arrowtail=dot, dir=both];
 
   buy_rent_barter_app_models_Complains -> buy_rent_barter_app_models_Users
   [label=" initiator_user (complain_initiator_user)"] [arrowhead=none, arrowtail=dot, dir=both];
 
-  buy_rent_barter_app_models_ComplainsAnswers -> buy_rent_barter_app_models_Complains
-  [label=" complain_id (complainsanswers)"] [arrowhead=none, arrowtail=dot, dir=both];
+  buy_rent_barter_app_models_Complains -> buy_rent_barter_app_models_Users
+  [label=" subject_user (complain_subject_user)"] [arrowhead=none, arrowtail=dot, dir=both];
 
-  buy_rent_barter_app_models_ComplainsAnswers -> buy_rent_barter_app_models_Users
-  [label=" arbiter (complainsanswers)"] [arrowhead=none, arrowtail=dot, dir=both];
+  buy_rent_barter_app_models_Complains -> buy_rent_barter_app_models_Images
+  [label=" images (complain_description_images)"] [arrowhead=dot arrowtail=dot, dir=both];
+
+  buy_rent_barter_app_models_ComplainAnswers -> buy_rent_barter_app_models_Complains
+  [label=" complain_id (complainanswers)"] [arrowhead=none, arrowtail=dot, dir=both];
+
+  buy_rent_barter_app_models_ComplainAnswers -> buy_rent_barter_app_models_Users
+  [label=" arbiter_to_resolve (complainanswers)"] [arrowhead=none, arrowtail=dot, dir=both];
 
   buy_rent_barter_app_models_Donations -> buy_rent_barter_app_models_Users
   [label=" user_id (donations)"] [arrowhead=none, arrowtail=dot, dir=both];

@@ -1,7 +1,7 @@
 digraph model_graph {
   // Dotfile by Django-Extensions graph_models
-  // Created: 2020-05-07 18:41
-  // Cli Options: -a -X Permission,PermissionMixin,Group,AbstractUser,User,AbstractBaseUser,LogEntry,Session,AbstractBaseSession -o my_project.dot
+  // Created: 2020-05-06 13:55
+  // Cli Options: -a -X Permission,PermissionMixin,Group,AbstractUser,User,AbstractBaseUser,LogEntry,Session,AbstractBaseSession -o my1.dot
 
   fontname = "Roboto"
   fontsize = 8
@@ -337,22 +337,6 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">item_price_currency</FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto">CharField</FONT>
-      </TD></TR>
-    
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">item_price_value</FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto">FloatField</FONT>
-      </TD></TR>
-    
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
       <FONT FACE="Roboto">proposal_item_state</FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto">CharField</FONT>
@@ -393,14 +377,6 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">rent_time_unit_measure</FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto">CharField</FONT>
-      </TD></TR>
-    
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
       <FONT FACE="Roboto">set_visible_for_all</FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto">BooleanField</FONT>
@@ -420,6 +396,56 @@ digraph model_graph {
       <FONT FACE="Roboto">total_items</FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto">IntegerField</FONT>
+      </TD></TR>
+    
+    
+      </TABLE>
+      >]
+  
+    buy_rent_barter_app_models_ProposalsItemsGetConditions [label=<
+      <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
+      <FONT FACE="Roboto" COLOR="white" POINT-SIZE="10"><B>
+      ProposalsItemsGetConditions
+      </B></FONT></TD></TR>
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto"><B>id</B></FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto"><B>AutoField</B></FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto"><B>proposal_id</B></FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto"><B>OneToOneField (id)</B></FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">item_price_currency</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">CharField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">item_price_value</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">FloatField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">rent_time_unit_measure</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">CharField</FONT>
       </TD></TR>
     
     
@@ -566,6 +592,32 @@ digraph model_graph {
       </TABLE>
       >]
   
+    buy_rent_barter_app_models_DesiredItemsDescriptionTags [label=<
+      <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
+      <FONT FACE="Roboto" COLOR="white" POINT-SIZE="10"><B>
+      DesiredItemsDescriptionTags
+      </B></FONT></TD></TR>
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto"><B>id</B></FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto"><B>AutoField</B></FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT COLOR="#7B7B7B" FACE="Roboto">title</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT COLOR="#7B7B7B" FACE="Roboto">CharField</FONT>
+      </TD></TR>
+    
+    
+      </TABLE>
+      >]
+  
     buy_rent_barter_app_models_DesiredItemExistenceNotifications [label=<
       <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
       <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
@@ -677,7 +729,7 @@ digraph model_graph {
       <TR><TD ALIGN="LEFT" BORDER="0">
       <FONT FACE="Roboto"><B>additional_money_offers</B></FONT>
       </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto"><B>OneToOneField (id)</B></FONT>
+      <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
       </TD></TR>
     
     
@@ -724,14 +776,6 @@ digraph model_graph {
     
       <TR><TD ALIGN="LEFT" BORDER="0">
       <FONT FACE="Roboto">requested_object_received</FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto">DateTimeField</FONT>
-      </TD></TR>
-    
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">total_accept_approve_answer</FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto">DateTimeField</FONT>
       </TD></TR>
@@ -839,17 +883,9 @@ digraph model_graph {
     
     
       <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto"><B>additional_money_offers</B></FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
-      </TD></TR>
-    
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
       <FONT FACE="Roboto"><B>request_id</B></FONT>
       </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto"><B>OneToOneField (id)</B></FONT>
+      <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
       </TD></TR>
     
     
@@ -858,6 +894,14 @@ digraph model_graph {
       <FONT FACE="Roboto">accept_request</FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto">BooleanField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">accepted_time_by_requested_user</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">DateTimeField</FONT>
       </TD></TR>
     
     
@@ -997,7 +1041,7 @@ digraph model_graph {
       <TR><TD ALIGN="LEFT" BORDER="0">
       <FONT FACE="Roboto"><B>chain_exchange_block_id</B></FONT>
       </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto"><B>OneToOneField (id)</B></FONT>
+      <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
       </TD></TR>
     
     
@@ -1006,6 +1050,14 @@ digraph model_graph {
       <FONT FACE="Roboto">accept_exchange_conditions</FONT>
       </TD><TD ALIGN="LEFT">
       <FONT FACE="Roboto">BooleanField</FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">answer_deadline_for_next_chain_exchanger</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">DateTimeField</FONT>
       </TD></TR>
     
     
@@ -1022,14 +1074,6 @@ digraph model_graph {
       <FONT COLOR="#7B7B7B" FACE="Roboto">answer_time</FONT>
       </TD><TD ALIGN="LEFT">
       <FONT COLOR="#7B7B7B" FACE="Roboto">DateTimeField</FONT>
-      </TD></TR>
-    
-    
-    
-      <TR><TD ALIGN="LEFT" BORDER="0">
-      <FONT FACE="Roboto">back_deadline_answer</FONT>
-      </TD><TD ALIGN="LEFT">
-      <FONT FACE="Roboto">DateTimeField</FONT>
       </TD></TR>
     
     
@@ -1349,6 +1393,32 @@ digraph model_graph {
     
       </TABLE>
       >]
+  
+    buy_rent_barter_app_models_Document [label=<
+      <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
+      <FONT FACE="Roboto" COLOR="white" POINT-SIZE="10"><B>
+      Document
+      </B></FONT></TD></TR>
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto"><B>id</B></FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto"><B>AutoField</B></FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">docfile</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">FileField</FONT>
+      </TD></TR>
+    
+    
+      </TABLE>
+      >]
 
   }
 
@@ -1371,7 +1441,10 @@ digraph model_graph {
   buy_rent_barter_app_models_Proposals -> buy_rent_barter_app_models_ProposalsTags
   [label=" search_tags (proposals_tags)"] [arrowhead=dot arrowtail=dot, dir=both];
 
-  buy_rent_barter_app_models_Proposals -> buy_rent_barter_app_models_DesiredItemsQueries
+  buy_rent_barter_app_models_ProposalsItemsGetConditions -> buy_rent_barter_app_models_Proposals
+  [label=" proposal_id (proposalsitemsgetconditions)"] [arrowhead=none, arrowtail=none, dir=both];
+
+  buy_rent_barter_app_models_ProposalsItemsGetConditions -> buy_rent_barter_app_models_DesiredItemsQueries
   [label=" wished_items (desired_items)"] [arrowhead=dot arrowtail=dot, dir=both];
 
   buy_rent_barter_app_models_FavoriteProposals -> buy_rent_barter_app_models_Proposals
@@ -1386,7 +1459,7 @@ digraph model_graph {
   buy_rent_barter_app_models_DesiredItemsQueries -> buy_rent_barter_app_models_ProposalsCategories
   [label=" category (desireditemsqueries)"] [arrowhead=none, arrowtail=dot, dir=both];
 
-  buy_rent_barter_app_models_DesiredItemsQueries -> buy_rent_barter_app_models_ProposalsTags
+  buy_rent_barter_app_models_DesiredItemsQueries -> buy_rent_barter_app_models_DesiredItemsDescriptionTags
   [label=" query_description_tags (desire_item_description_tags)"] [arrowhead=dot arrowtail=dot, dir=both];
 
   buy_rent_barter_app_models_DesiredItemExistenceNotifications -> buy_rent_barter_app_models_DesiredItemsQueries
@@ -1399,7 +1472,7 @@ digraph model_graph {
   [label=" request_user_id (proposalsitemsrequests)"] [arrowhead=none, arrowtail=dot, dir=both];
 
   buy_rent_barter_app_models_ProposalsItemsRequests -> buy_rent_barter_app_models_AdditionalRequestsOffers
-  [label=" additional_money_offers (proposalsitemsrequests)"] [arrowhead=none, arrowtail=none, dir=both];
+  [label=" additional_money_offers (proposalsitemsrequests)"] [arrowhead=none, arrowtail=dot, dir=both];
 
   buy_rent_barter_app_models_PossibleItems -> buy_rent_barter_app_models_Proposals
   [label=" proposal_item_id (possibleitems)"] [arrowhead=none, arrowtail=dot, dir=both];
@@ -1408,10 +1481,7 @@ digraph model_graph {
   [label=" topic_content_type (possibleitems)"] [arrowhead=none, arrowtail=dot, dir=both];
 
   buy_rent_barter_app_models_ProposalItemsRequestsAnswers -> buy_rent_barter_app_models_ProposalsItemsRequests
-  [label=" request_id (proposalitemsrequestsanswers)"] [arrowhead=none, arrowtail=none, dir=both];
-
-  buy_rent_barter_app_models_ProposalItemsRequestsAnswers -> buy_rent_barter_app_models_AdditionalRequestsOffers
-  [label=" additional_money_offers (proposalitemsrequestsanswers)"] [arrowhead=none, arrowtail=dot, dir=both];
+  [label=" request_id (proposalitemsrequestsanswers)"] [arrowhead=none, arrowtail=dot, dir=both];
 
   buy_rent_barter_app_models_PossibleChainExchangeProposals -> buy_rent_barter_app_models_Users
   [label=" user_id (possiblechainexchangeproposals)"] [arrowhead=none, arrowtail=dot, dir=both];
@@ -1420,7 +1490,7 @@ digraph model_graph {
   [label=" additional_money_offers (possiblechainexchangeproposals)"] [arrowhead=none, arrowtail=dot, dir=both];
 
   buy_rent_barter_app_models_ChainExchangeProposalsAnswers -> buy_rent_barter_app_models_PossibleChainExchangeProposals
-  [label=" chain_exchange_block_id (chainexchangeproposalsanswers)"] [arrowhead=none, arrowtail=none, dir=both];
+  [label=" chain_exchange_block_id (chainexchangeproposalsanswers)"] [arrowhead=none, arrowtail=dot, dir=both];
 
   buy_rent_barter_app_models_ChainExchangeProposalsAnswers -> buy_rent_barter_app_models_AdditionalRequestsOffers
   [label=" additional_money_offers (chainexchangeproposalsanswers)"] [arrowhead=none, arrowtail=dot, dir=both];
