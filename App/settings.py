@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+#TIME_ZONE = 'Europe/Istanbul'
+
+#TIME_ZONE = 'UTC'
+DATETIME_FORMAT = '%d-%m-%Y %H:%M:%S'
+#USE_L10N = True
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -26,6 +31,7 @@ SECRET_KEY = 'cxa0p*#jps4b^*%z&j^ky+kdwv*4&%7i)*(!w*kkqqeb78=4xk'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+#os.getenv('DJANGO_LOG_LEVEL', 'INFO')
 
 
 # Application definition
@@ -41,7 +47,8 @@ INSTALLED_APPS = [
     'django_extensions',
     'schema_graph',
     'django_spaghetti',
-    'corsheaders'
+    'corsheaders',
+
 ]
 
 GRAPH_MODELS = {
