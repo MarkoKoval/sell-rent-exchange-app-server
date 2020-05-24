@@ -8,7 +8,11 @@ import json
 from django.core import serializers
 
 def get_user_info(user):
-    obj = Location.objects.get(id = user.location.id).json()
+    obj = None
+    try:
+        obj = Location.objects.get(id = user.location.id).json()
+    except:
+        pass
    # data = serializers.serialize('json', [obj, ])
    # print(str(type(data)) +data)
   #  struct = json.loads(data)[0]

@@ -6,8 +6,8 @@ import pytz
 from django.utils import timezone
 from django.utils import timezone
 
-
-
+import subprocess
+subprocess.Popen(['pip', 'freeze'], stdout=open('requiremeввnts.txt', 'w'))
 
 
 

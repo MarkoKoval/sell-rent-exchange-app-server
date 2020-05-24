@@ -30,7 +30,7 @@ SECRET_KEY = 'cxa0p*#jps4b^*%z&j^ky+kdwv*4&%7i)*(!w*kkqqeb78=4xk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 #os.getenv('DJANGO_LOG_LEVEL', 'INFO')
 
 
