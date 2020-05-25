@@ -6,7 +6,7 @@ import hashlib
 from datetime import datetime
 from django.utils import timezone
 from django.db import transaction
-
+from ..system_entrence import system_entrence_
 
 @csrf_exempt
 @transaction.atomic
@@ -119,6 +119,11 @@ def update_images(it, images):
 @csrf_exempt
 @transaction.atomic
 def create(r):
+    auth = json.loads(r.POST["auth"])
+    # print(auth)
+    if auth["token"] != system_entrence_.get_auth_token(auth["id"]):
+        print("create")
+        return JsonResponse({"answer": "Немає прав"}, status=400)
     # return JsonResponse({"images": [i.json() for i in Images.objects.all()]},content_type="application/json", safe=False )
     # serialized_data = serializers.serialize("json", Proposals.objects.all(), ensure_ascii=False)
     # return JsonResponse({"fefew": serialized_data})
@@ -233,11 +238,15 @@ def update(r):
     images = json.loads(r.POST["images_"])
     additional = json.loads(r.POST["additional"])
     obj = json.loads(r.POST["content"])
-
+    auth = json.loads(r.POST["auth"])
+    # print(auth)
+    if auth["token"] != system_entrence_.get_auth_token(auth["id"]):
+        print("update")
+        return JsonResponse({"answer": "Немає прав"}, status=400)
 
 
     p = Proposals.objects.filter(id=obj["id"])
-    if p.is_in_deal():
+    if p[0].is_in_deal():
         return JsonResponse({"result": "Пропозицією хтось вже зацікавився не час редагувати"}, status=400)
     wished_items = json.loads(r.POST["wished_items_"])
     print(wished_items)

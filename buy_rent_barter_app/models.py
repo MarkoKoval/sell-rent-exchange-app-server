@@ -584,11 +584,13 @@ class ComplaintsAnswers(models.Model):
     sanction = models.CharField(max_length=30, default="Без санкцій")  # "BLOCK ACCOUNT", "BLOCK SPECIFIED CONTENT",
     # "BLOCK ACCOUNT AND BLOCK SPECIFIED CONTENT", "NO SANCTIONS","BAD COMPLAIN")
     approve_complain = models.BooleanField(default=False)
-    sanction_deadline = models.DateTimeField(default=None)
+    sanction_deadline = models.DateTimeField(default=None, null=True, blank=True)
     answer_time = models.DateTimeField(auto_now_add=True)
 
     def json(self):
-        return {"complain_id": self.complain_id,
+        return {
+            "id": self.id,
+            "complain_id": self.complain_id.id,
                 "arbiter": {"name": self.arbiter.name, "id": self.arbiter.id},
                 "sanction": self.sanction,
                 "answer_text": self.answer_text,
@@ -619,14 +621,33 @@ class Complaints(models.Model):
            return answer.json()
         except Exception as e:
             return None
-
+    def g(self):
+        res = None
+        print(222)
+        try:
+           # print(str(self.content_type) == "proposals")
+            print(self.content_type )
+            if  str(self.content_type) == "proposals":
+                res = Proposals.objects.get(id=self.object_id).creator_id
+            elif  str(self.content_type) == "users":
+                res = Users.objects.get(id=self.object_id).creator_id
+            print(res)
+        except Exception as e:
+            print(e)
+            print(res)
+            return None
+        return {"id": res.id, "name": res.name}
     def json(self):
         return  {
+            "id": self.id,
             "complain_text": self.complain_text,
             "complain_initiator_user": self.complain_initiator_user.name,
+            "complain_initiator_user_id": self.complain_initiator_user.id,
             "created_time": self.created_time,
             "content_type": str(self.content_type),
-            "answer": self.get_answer()
+            "answer": self.get_answer(),
+            "object_id": self.object_id,
+            "object_user": self.g()
        #     "complain_object": self.content_type
         }
     class Meta:

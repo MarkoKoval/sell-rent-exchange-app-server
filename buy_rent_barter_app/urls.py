@@ -9,6 +9,7 @@ from .donate import donate
 from .complain import complain_handler
 from .chain_exchange import chain_exchange
 from .complain import complain_handler
+
 urlpatterns = [
     path("donate/<int:id>", donate.PayView, name='pay_view'),
     # path("pay-callback/<int:id>", donate.PayCallbackView),
@@ -55,8 +56,13 @@ urlpatterns = [
 
     path("proposal/<int:id>/create/complaint",complain_handler.create_proposal_complain),
     path("created/complains/<int:id>",complain_handler.created_complains),
-    path("get/complains", complain_handler.get_complains)
-   # path("proposal/<int:id>/create/complaint",complain_handler.create_proposal_complain),
+    path("get/complains/<int:id>", complain_handler.get_complains),
+    path("delete/complain/<int:id>", complain_handler.delete_complain),
+    path("answer/complaint/<int:id>",complain_handler.answer_complaint),
+    path("get/complains/for-desicion/<int:id>",complain_handler.complains_for_desicion ),
+    path("compalaint/answer/<int:id>",complain_handler.get_compalain_answer),
+    path("change/role/user/<int:id>",system_entrence_.change_role )
+    # path("proposal/<int:id>/create/complaint",complain_handler.create_proposal_complain),
    # path("proposal/<int:id>/create/complaint",complain_handler.create_proposal_complain),
     #path(),
    # path()

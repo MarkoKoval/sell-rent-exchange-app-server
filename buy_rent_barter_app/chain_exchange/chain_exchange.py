@@ -36,12 +36,11 @@ def comparator(search, wished):
                    search_for.category.subcategory == wished.category.subcategory
         if not category and search_for.category != "Інше":
             continue
+        """
         proposal_type = True if search_for.proposal_item_type == "Нема значення" else\
             search_for.proposal_item_type == wished.proposal_item_type
         if not proposal_type:
             continue
-        """
-
         wished_tags = [i.title.lower() for i in wished.search_tags.all()]
         #print(dir(search_for))
         search_tags = [  i.title.lower() for i in search_for.query_description_tags.all()]
