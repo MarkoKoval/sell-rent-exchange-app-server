@@ -4,7 +4,8 @@ import json
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.dateparse import parse_datetime
 from django.db import transaction
-
+from ..notify_email import email_notify
+import threading
 
 @csrf_exempt
 def create_simple_proposal_request(r, id):
@@ -147,6 +148,16 @@ def create_combined_proposal_request(r, id):
     print(PossibleItems.objects.count())
     print("REQ Count")
     print(ProposalsItemsRequests.objects.count())
+
+
+    creator =    Proposals.objects.get(id=id).creator_id
+    t = threading.Thread(target=email_notify.send_email, args=("Новий запит  від користувача "+creator.name, "Деталі на платформі '"+
+                                                               data["simple"]["request_message"]+"'", creator.email))
+    t.setDaemon(True)
+    t.start()
+    t.join(10)
+
+
     return JsonResponse({"result": "success"})
 
 
@@ -253,7 +264,13 @@ def answer_proposal_request_(r, id):
                                          proposal=request, type="пропозиція")
     except Exception as e:
         return JsonResponse({"res":e}, status=400)
-    print("eee")
+  #  print("eee")
+    creator = Proposals.objects.get(id=id).creator_id
+    t = threading.Thread(target=email_notify.send_email, args=("Новий запит від "+creator.name, " Деталі на платформі: '" +
+                                                               data["description"]+"'", creator.email))
+    t.setDaemon(True)
+    t.start()
+    t.join(10)
     return JsonResponse({},status=200)
 
 

@@ -1,12 +1,16 @@
 from ..models import *
-from django.http import JsonResponse
-import json
-from django.views.decorators.csrf import csrf_exempt
 import hashlib
 from datetime import datetime
 from django.utils import timezone
 from django.db import transaction
 from ..system_entrence import system_entrence_
+from django.db.models import Q
+from ..notify_email import email_notify
+import threading
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+import json
+import base64
 
 @csrf_exempt
 @transaction.atomic
@@ -20,11 +24,6 @@ def add_tags(it, tags):
 
 
 # from .models import Document
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
-import json
-import sys
-import base64
 
 from django.core.files.base import ContentFile
 
@@ -43,23 +42,16 @@ def add_wished(it, wished):
                                                                         "subcategory"])
         except Exception as e:
             print(e)
-        print("gerge")
         i, _ = DesiredItemsQueries.objects.get_or_create(category=category,
                                                          query_creator_id=it.creator_id,
                                                          query_description_text=w["wished_description"])
-        # i.query_creator_id_id = it.creator_id.id
-        # i.query_description_text = w["wished_description"],
-
         print(category.json())
-        # i.category.id = category.id
         i.query_description_tags.clear()
         if w["wished_proposal_tags"] != None and len(w["wished_proposal_tags"]) > 0:
             for tags in w["wished_proposal_tags"]:
                 t, _ = ProposalsTags.objects.get_or_create(title=tags)
                 i.query_description_tags.add(t)
         print(w.keys())
-        #print(w["wished_proposal_type"])
-       # print(w["proposal_item_type"])
         res = w["wished_proposal_type"] # if "wished_proposal_type" in w else w["proposal_item_type"]
         i.proposal_item_type = res
         i.save()
@@ -120,7 +112,8 @@ def update_images(it, images):
 @transaction.atomic
 def create(r):
     auth = json.loads(r.POST["auth"])
-    # print(auth)
+    print(auth)
+    print(system_entrence_.get_auth_token(auth["id"]))
     if auth["token"] != system_entrence_.get_auth_token(auth["id"]):
         print("create")
         return JsonResponse({"answer": "Немає прав"}, status=400)
@@ -150,7 +143,7 @@ def create(r):
 
     try:
         p = Proposals.objects.get(title=obj["title"], creator_id_id=obj["creator_id"])
-        return JsonResponse({"result": "Вже є створена пропозиція з таким заголовком"}, content_type="application/json",
+        return JsonResponse({"answer": "Вже є створена пропозиція з таким заголовком"}, content_type="application/json",
                             safe=False, status=400)
     except:
         pass
@@ -239,15 +232,24 @@ def update(r):
     additional = json.loads(r.POST["additional"])
     obj = json.loads(r.POST["content"])
     auth = json.loads(r.POST["auth"])
-    # print(auth)
+    print(auth)
+    print( system_entrence_.get_auth_token(auth["id"]))
     if auth["token"] != system_entrence_.get_auth_token(auth["id"]):
         print("update")
         return JsonResponse({"answer": "Немає прав"}, status=400)
 
-
+    print(333)
     p = Proposals.objects.filter(id=obj["id"])
+    pp = Proposals.objects.filter(Q(creator_id_id=obj["creator_id"])
+                             & Q(title=obj["title"]) & ~Q(id=obj["id"])).exists()
+    print(pp)
+    if Proposals.objects.filter(Q(creator_id_id=obj["creator_id"])
+                                 & Q(title=obj["title"]) &  ~Q(id=obj["id"])).exists():
+        return JsonResponse({"answer": "В вас вже існує  пропозиція з таким заголовком"}, status=400)
+    title = obj["title"]
     if p[0].is_in_deal():
-        return JsonResponse({"result": "Пропозицією хтось вже зацікавився не час редагувати"}, status=400)
+        #print(444)
+        return JsonResponse({"answer": "Пропозицією хтось вже зацікавився не час редагувати"}, status=400)
     wished_items = json.loads(r.POST["wished_items_"])
     print(wished_items)
     print(obj)
@@ -467,10 +469,11 @@ def filter_proposals(proposals_, data):
     return proposals_
 
 
-from django.db.models import Q
 
 @transaction.atomic
 def get_proposals(r):
+  #  print([i.id for i in Proposals.objects.all()])
+   # return JsonResponse({})
     print(123)
     # if r.method == "GET" and "params" in r.GET.keys():
     #    pass
@@ -484,7 +487,8 @@ def get_proposals(r):
 
     print(r.GET)
     print(type(r.GET["user_id"]))
-    if r.GET and "user_id" in r.GET and r.GET["user_id"] != 'NaN':
+    auth = json.loads(r.GET["auth"])
+    if r.GET and "user_id" in r.GET and r.GET["user_id"] != 'NaN' and auth["token"] == system_entrence_.get_auth_token(auth["id"]):
         print(r.GET.keys())
         data = None
         user_id = None
@@ -507,8 +511,16 @@ def get_proposals(r):
             for i in t.split():
                 if len(i) > 1:
                     # Q(moderated=False)
-                    for j in Proposals.objects.filter(
-                            Q(is_blocked_by_admin=False) & Q(title__contains=i) & (Q(total_items=None) | Q(available_items__gte=0))):
+                    filter_blocked = None
+                    print(auth["role"])
+                    if auth["role"] == "Адміністратор":
+                        filter_blocked = Proposals.objects.filter(
+                            Q(title__contains=i) & (Q(total_items=None) | Q(available_items__gte=0)))
+                    else:
+                        filter_blocked = Proposals.objects.filter(   Q(is_blocked_by_admin=False) &
+                            Q(title__contains=i) & (Q(total_items=None) | Q(available_items__gte=0)))
+
+                    for j in filter_blocked:
                         saved = False
                         if user_id is not None and r.GET["user_id"] != 0:
                             saved = FavoriteProposals.objects.filter(
@@ -525,8 +537,15 @@ def get_proposals(r):
                     proposals_[v.id] = v
         elif data is None:
             # if user_id is not None and r.GET["user_id"] != 0:
-
-            for v in Proposals.objects.all():
+            filter_blocked = None
+            if auth["role"] == "Адміністратор":
+                filter_blocked = Proposals.objects.filter(
+                   (Q(total_items=None) | Q(available_items__gte=0)))
+            else:
+                filter_blocked = Proposals.objects.filter(Q(is_blocked_by_admin=False) &
+                                                         (
+                                                                      Q(total_items=None) | Q(available_items__gte=0)))
+            for v in filter_blocked:
                 saved = False
                 if user_id is not None and r.GET["user_id"] != 0:
                     print(v.id)
@@ -642,7 +661,9 @@ if  course_creator_email != None and bool(re.match("^.+@(\[?)[a-zA-Z0-9-.]+.([a-
         t.start()
 """
 
-
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 email = 'johnsmithuk08@gmail.com'
 password = 'johnsmith1999uk'
 server = smtplib.SMTP('smtp.gmail.com', 587)
@@ -682,19 +703,16 @@ for i in range(100):
 print(time.time() - t)
 """
 
-
+"""
 import threading
 import datetime
-def   send_email_for_course_subscription(message = "hello" ,subject = "New",
+def   send_email_for_course_subscription(message = "" ,subject = "",
                                          reciever_email = "marko.koval.pz.2016@lpnu.ua"):
-
-    """
     email = 'johnsmithuk08@gmail.com'
     password = 'johnsmith1999uk'
-    """
-  #  send_to_email = reciever_email
-   # subject = 'New '  # The subject line
-   # message = message
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.starttls()
+    server.login(email, password)
     print(datetime.datetime.now())
 
     msg = MIMEMultipart()
@@ -704,23 +722,18 @@ def   send_email_for_course_subscription(message = "hello" ,subject = "New",
 
     # Attach the message to the MIMEMultipart object
     msg.attach(MIMEText(message, 'plain'))
-    """
-    server = smtplib.SMTP('smtp.gmail.com', 587)
-    server.starttls()
-    server.login(email, password)
-    """
     print(1223)
     print(datetime.datetime.now())
     text = msg.as_string()  # You now need to convert the MIMEMultipart object to a string to send
     server.sendmail(email, reciever_email, text)
     print(datetime.datetime.now())
-   # server.quit()
-
+    server.quit()
+"""
 #proposals/wished/get
 @csrf_exempt
 def get_wished(r):
 
-    print()
+    """
     t = threading.Thread(target=send_email_for_course_subscription, args=(
                                                                           'New subscriber for the course congratulations',
                                                                          "New",
@@ -728,34 +741,26 @@ def get_wished(r):
                                                                           ), kwargs={})
     t.setDaemon(True)
     t.start()
+    t.join(10)
 
-    print(222)
     """
+    auth = json.loads(r.GET["auth"])
+    print(auth)
+    res = None
     try:
-        message = "hello"
-        msg = MIMEMultipart()
-        msg['From'] = email
-        msg['To'] = "marko.koval.pz.2016@lpnu.ua"
-        msg['Subject'] = "fffff"
+        print(auth["token"])
+        print(system_entrence_.get_auth_token(auth["id"]))
+        print(auth["token"] == system_entrence_.get_auth_token(auth["id"]))
 
-        # Attach the message to the MIMEMultipart object
-        msg.attach(MIMEText(message, 'plain'))
-        text = msg.as_string()  # You now need to convert the MIMEMultipart object to a string to send
-        server.sendmail(email, "marko.koval.pz.2016@lpnu.ua", text)
-    except Exception as e:
-        print(e)
-    """
-    """
-    print("prop Count")
-    print(PossibleItems.objects.count())
-    print("REQ Count")
-    print(ProposalsItemsRequests.objects.count())
-    print(13)
-    """
-    print(r.GET["user_id"])
-    res = FavoriteProposals.objects.filter(user_id_id=r.GET["user_id"])
-    print(res)
-    return JsonResponse({"date": datetime.datetime.now(), "result": [i.json() for i in res]}, status=200)
+        if auth["token"] == system_entrence_.get_auth_token(auth["id"]):
+            res = FavoriteProposals.objects.filter(user_id_id=r.GET["user_id"])
+        else:
+            return JsonResponse({"date": datetime.now(), "result": "Немає прав"}, status=400)
+
+        return JsonResponse({"date": datetime.now(), "result": [i.json() for i in res]}, status=200)
+    except:
+        return JsonResponse({"date": datetime.now(), "result": [i.json() for i in res]}, status=400)
+
 
 
 from django.utils.dateparse import parse_datetime
@@ -964,3 +969,4 @@ def get_several(r):
 
         result.append(chain)
     return JsonResponse({"result":  result})
+

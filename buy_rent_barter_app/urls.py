@@ -61,7 +61,12 @@ urlpatterns = [
     path("answer/complaint/<int:id>",complain_handler.answer_complaint),
     path("get/complains/for-desicion/<int:id>",complain_handler.complains_for_desicion ),
     path("compalaint/answer/<int:id>",complain_handler.get_compalain_answer),
-    path("change/role/user/<int:id>",system_entrence_.change_role )
+    path("change/role/user/<int:id>",system_entrence_.change_role ),
+    path("get/rights", system_entrence_.get_rights),
+    path("user/<int:id>/create/complaint", complain_handler.create_user_complain),
+    path("change/block-status/users/<int:id>",complain_handler.change_block_status ),
+    path("change/proposal-block-status/proposals/<int:id>", complain_handler.change_proposal_blocked)
+
     # path("proposal/<int:id>/create/complaint",complain_handler.create_proposal_complain),
    # path("proposal/<int:id>/create/complaint",complain_handler.create_proposal_complain),
     #path(),

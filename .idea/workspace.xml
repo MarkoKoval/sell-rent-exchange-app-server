@@ -2,15 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57e35cf4-8a32-411a-a8f5-6df05422f97b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/buy_rent_barter_app/handle_users/change_status.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/locustfile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buy_rent_barter_app/chain_exchange/chain_exchange.py" beforeDir="false" afterPath="$PROJECT_DIR$/buy_rent_barter_app/chain_exchange/chain_exchange.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buy_rent_barter_app/complain/complain_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/buy_rent_barter_app/complain/complain_handler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buy_rent_barter_app/donate/donate.py" beforeDir="false" afterPath="$PROJECT_DIR$/buy_rent_barter_app/donate/donate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buy_rent_barter_app/handle_users/change_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/buy_rent_barter_app/handle_users/change_status.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buy_rent_barter_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/buy_rent_barter_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buy_rent_barter_app/notify_email/email_notify.py" beforeDir="false" afterPath="$PROJECT_DIR$/buy_rent_barter_app/notify_email/email_notify.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buy_rent_barter_app/proposals/crud_proposals.py" beforeDir="false" afterPath="$PROJECT_DIR$/buy_rent_barter_app/proposals/crud_proposals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buy_rent_barter_app/proposals_requests/proposals_requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/buy_rent_barter_app/proposals_requests/proposals_requests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buy_rent_barter_app/system_entrence/system_entrence_.py" beforeDir="false" afterPath="$PROJECT_DIR$/buy_rent_barter_app/system_entrence/system_entrence_.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buy_rent_barter_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/buy_rent_barter_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buy_rent_barter_app/user_profile/user_profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/buy_rent_barter_app/user_profile/user_profile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,14 +61,14 @@
     <favorites_list name="App" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.102490425">
+    <splitter split-orientation="horizontal" split-proportion="0.13212025">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/chain_exchange/chain_exchange.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="646">
-                  <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+                <state relative-caret-position="68">
+                  <caret line="37" column="25" selection-start-line="37" selection-end-line="38" />
                   <folding>
                     <element signature="e#1#23#0" expanded="true" />
                   </folding>
@@ -72,20 +76,26 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/handle_users/change_status.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-end-line="5" />
+                <state relative-caret-position="187">
+                  <caret line="11" column="8" lean-forward="true" selection-start-line="10" selection-end-line="63" selection-end-column="38" />
+                  <folding>
+                    <element signature="e#0#22#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/complain/complain_handler.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34">
-                  <caret line="2" column="2" selection-start-line="1" selection-end-line="6" selection-end-column="30" />
+                <state relative-caret-position="238">
+                  <caret line="33" column="4" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+                  <folding>
+                    <element signature="e#0#22#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -93,29 +103,58 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/donate/donate.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="291">
-                  <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+                <state relative-caret-position="51">
+                  <caret line="6" column="8" lean-forward="true" selection-start-line="4" selection-end-line="7" selection-end-column="12" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/notify_email/email_notify.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="153">
+                  <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
                   <folding>
-                    <element signature="e#0#24#0" expanded="true" />
+                    <element signature="e#0#14#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/login.html">
+            <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/chain_exchange/find_chain.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
+                <state relative-caret-position="436">
+                  <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/App/settings.py">
+            <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/get_values/get_json_values_of_model.py">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/donate/liqp.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2023">
-                  <caret line="119" column="35" selection-start-line="119" selection-start-column="35" selection-end-line="119" selection-end-column="35" />
+                <state relative-caret-position="382">
+                  <caret line="131" column="65" selection-start-line="131" selection-start-column="65" selection-end-line="131" selection-end-column="65" />
+                  <folding>
+                    <element signature="e#149#162#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/user_profile/user_profile.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1445">
+                  <caret line="92" column="34" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
+                  <folding>
+                    <element signature="e#0#22#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -124,19 +163,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/billing_views.py">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/proposals/crud_proposals.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="283">
-                  <caret line="248" column="10" selection-start-line="248" selection-start-column="10" selection-end-line="248" selection-end-column="10" />
-                  <folding>
-                    <element signature="e#0#22#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="102">
+                  <caret line="6" column="24" lean-forward="true" selection-end-line="979" />
                 </state>
               </provider>
             </entry>
@@ -147,10 +178,19 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/locustfile.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="102">
+                  <caret line="6" column="41" selection-end-line="6" selection-end-column="41" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="125">
-                  <caret line="579" column="16" lean-forward="true" selection-start-line="579" selection-start-column="6" selection-end-line="579" selection-end-column="23" />
+                <state relative-caret-position="289">
+                  <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
                   <folding>
                     <element signature="e#0#28#0" expanded="true" />
                   </folding>
@@ -161,8 +201,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/proposals_requests/proposals_requests.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2737">
-                  <caret line="166" column="3" selection-start-line="166" selection-start-column="3" selection-end-line="166" selection-end-column="3" />
+                <state relative-caret-position="-5449">
+                  <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
                   <folding>
                     <element signature="e#0#22#0" expanded="true" />
                   </folding>
@@ -173,8 +213,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/system_entrence/system_entrence_.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="104" column="11" lean-forward="true" selection-start-line="103" selection-start-column="7" selection-end-line="107" selection-end-column="68" />
+                <state relative-caret-position="-43">
+                  <caret line="105" column="39" selection-start-line="105" selection-start-column="39" selection-end-line="105" selection-end-column="39" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -194,8 +234,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/urls.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="63" column="10" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
+                <state relative-caret-position="204">
+                  <caret line="27" column="46" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="54" />
                   <folding>
                     <element signature="e#0#28#0" expanded="true" />
                   </folding>
@@ -206,7 +246,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="409">
+                <state relative-caret-position="731">
                   <caret line="47" column="3" selection-start-line="47" selection-end-line="47" selection-end-column="12" />
                   <folding>
                     <element signature="e#0#35#0" expanded="true" />
@@ -218,7 +258,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/п.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
+                <state relative-caret-position="153">
                   <caret line="11" selection-start-line="11" selection-end-line="11" />
                 </state>
               </provider>
@@ -241,28 +281,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>title</find>
-      <find>DesiredItemsQueries</find>
-      <find>get/proposal-requests-details</find>
-      <find>ProposalsCategories</find>
-      <find>proposal_type</find>
-      <find>create</find>
-      <find>id</find>
-      <find>Wished</find>
-      <find>add_wished</find>
-      <find>approve</find>
-      <find>answer_t</find>
-      <find>answer_</find>
-      <find>description</find>
-      <find>set_waited_for_deal</find>
-      <find>get_proposals</find>
-      <find>request_main_item</find>
-      <find>update</find>
-      <find>create/request/answer/</find>
-      <find>additional_money_offers</find>
-      <find>answer_proposal_request_</find>
-      <find>type</find>
-      <find>ContentType</find>
       <find>datetime</find>
       <find>Contenttype</find>
       <find>create/re</find>
@@ -271,6 +289,28 @@
       <find>Q</find>
       <find>Conte</find>
       <find>Proposal</find>
+      <find>Вже є створена пропозиція з таким заголовком</find>
+      <find>wished</find>
+      <find>get_proposals</find>
+      <find>get_proposal</find>
+      <find>create_auth_token</find>
+      <find>change</find>
+      <find>send_email_for_course_subscription</find>
+      <find>get_pro</find>
+      <find>message</find>
+      <find>update</find>
+      <find>check_rent_price</find>
+      <find>base64</find>
+      <find>get</find>
+      <find>proposals</find>
+      <find>delete_from_wished</find>
+      <find>save_to_wished</find>
+      <find>approve</find>
+      <find>approve_request_item_get</find>
+      <find>email_notify</find>
+      <find>get_auth_token</find>
+      <find>get_wished</find>
+      <find>change_block_status</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -279,7 +319,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bcrypt.py" />
         <option value="$PROJECT_DIR$/subscription-app/src/components/login/login.css" />
         <option value="$PROJECT_DIR$/subscription-app/src/components/register/register.vue" />
         <option value="$PROJECT_DIR$/subscription-app/src/components/register/style.css" />
@@ -313,30 +352,32 @@
         <option value="$PROJECT_DIR$/buy_rent_barter_app/djangs.py" />
         <option value="$PROJECT_DIR$/buy_rent_barter_app/get_values/get_json_values_of_model.py" />
         <option value="$PROJECT_DIR$/i.html" />
-        <option value="$PROJECT_DIR$/buy_rent_barter_app/user_profile/user_profile.py" />
         <option value="$PROJECT_DIR$/buy_rent_barter_app/billing_views.py" />
         <option value="$PROJECT_DIR$/buy_rent_barter_app/donate/liqp.py" />
-        <option value="$PROJECT_DIR$/buy_rent_barter_app/notify_email/email_notify.py" />
         <option value="$PROJECT_DIR$/buy_rent_barter_app/chain_exchange/find_chain.py" />
         <option value="$PROJECT_DIR$/buy_rent_barter_app/bcrypt.py" />
         <option value="$PROJECT_DIR$/App/settings.py" />
-        <option value="$PROJECT_DIR$/buy_rent_barter_app/proposals_requests/proposals_requests.py" />
         <option value="$PROJECT_DIR$/buy_rent_barter_app/migrations/0022_auto_20200524_2256.py" />
-        <option value="$PROJECT_DIR$/buy_rent_barter_app/donate/donate.py" />
+        <option value="$PROJECT_DIR$/locustfile.py" />
+        <option value="$PROJECT_DIR$/buy_rent_barter_app/user_profile/user_profile.py" />
+        <option value="$PROJECT_DIR$/buy_rent_barter_app/proposals_requests/proposals_requests.py" />
         <option value="$PROJECT_DIR$/buy_rent_barter_app/models.py" />
-        <option value="$PROJECT_DIR$/buy_rent_barter_app/complain/complain_handler.py" />
+        <option value="$PROJECT_DIR$/buy_rent_barter_app/donate/donate.py" />
         <option value="$PROJECT_DIR$/buy_rent_barter_app/chain_exchange/chain_exchange.py" />
         <option value="$PROJECT_DIR$/buy_rent_barter_app/handle_users/change_status.py" />
-        <option value="$PROJECT_DIR$/buy_rent_barter_app/urls.py" />
         <option value="$PROJECT_DIR$/buy_rent_barter_app/system_entrence/system_entrence_.py" />
+        <option value="$PROJECT_DIR$/buy_rent_barter_app/urls.py" />
+        <option value="$PROJECT_DIR$/buy_rent_barter_app/notify_email/email_notify.py" />
+        <option value="$PROJECT_DIR$/buy_rent_barter_app/complain/complain_handler.py" />
         <option value="$PROJECT_DIR$/buy_rent_barter_app/proposals/crud_proposals.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="188" />
-    <option name="width" value="1704" />
-    <option name="height" value="1030" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="40" />
+    <option name="y" value="11" />
+    <option name="width" value="1943" />
+    <option name="height" value="938" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -344,7 +385,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -367,30 +407,60 @@
               <item name="App" type="b2602c69:ProjectViewProjectNode" />
               <item name="App" type="462c0819:PsiDirectoryNode" />
               <item name="buy_rent_barter_app" type="462c0819:PsiDirectoryNode" />
+              <item name="complain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="buy_rent_barter_app" type="462c0819:PsiDirectoryNode" />
               <item name="donate" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="App" type="b2602c69:ProjectViewProjectNode" />
               <item name="App" type="462c0819:PsiDirectoryNode" />
               <item name="buy_rent_barter_app" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+              <item name="get_values" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="App" type="b2602c69:ProjectViewProjectNode" />
               <item name="App" type="462c0819:PsiDirectoryNode" />
               <item name="buy_rent_barter_app" type="462c0819:PsiDirectoryNode" />
-              <item name="system_entrence" type="462c0819:PsiDirectoryNode" />
+              <item name="handle_users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="buy_rent_barter_app" type="462c0819:PsiDirectoryNode" />
+              <item name="notify_email" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="buy_rent_barter_app" type="462c0819:PsiDirectoryNode" />
+              <item name="proposals" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="buy_rent_barter_app" type="462c0819:PsiDirectoryNode" />
+              <item name="proposals_requests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -631,7 +701,11 @@
       <workItem from="1590125722987" duration="20849000" />
       <workItem from="1590210938729" duration="46064000" />
       <workItem from="1590299420684" duration="48976000" />
-      <workItem from="1590383232796" duration="27131000" />
+      <workItem from="1590383232796" duration="38272000" />
+      <workItem from="1590481563316" duration="584000" />
+      <workItem from="1590498726805" duration="18152000" />
+      <workItem from="1590557052279" duration="28692000" />
+      <workItem from="1590647466517" duration="17815000" />
     </task>
     <servers />
   </component>
@@ -641,16 +715,16 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="818404000" />
+    <option name="totallyTimeSpent" value="894788000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="147" y="0" width="1363" height="824" extended-state="0" />
+    <frame x="-10" y="10" width="1554" height="750" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info anchor="top" id="Database" order="0" side_tool="true" weight="0.32739726" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.823389" visible="true" weight="0.20045906" />
-      <window_info id="Structure" order="1" sideWeight="0.4167813" side_tool="true" weight="0.23084112" />
-      <window_info id="Favorites" order="2" sideWeight="0.17661098" side_tool="true" weight="0.06961078" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.661191" visible="true" weight="0.15620828" />
+      <window_info id="Structure" order="1" sideWeight="0.34026465" side_tool="true" weight="0.24108528" />
+      <window_info id="Favorites" order="2" sideWeight="0.33880904" side_tool="true" weight="0.24108528" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986649" weight="0.5" />
@@ -659,10 +733,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.46393442" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.4637037" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.09638554" side_tool="true" weight="0.13642961" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32909092" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.90361446" visible="true" weight="0.33925927" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.90361446" visible="true" weight="0.09650582" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -706,49 +780,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/buy_rent_barter_app/models.py</url>
-          <line>59</line>
+          <line>60</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/buy_rent_barter_app/proposals/crud_proposals.py</url>
-          <line>96</line>
+          <line>95</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/buy_rent_barter_app/proposals/crud_proposals.py</url>
-          <line>6</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/buy_rent_barter_app/complain/complain_handler.py</url>
-          <line>18</line>
-          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/django/db/backends/sqlite3/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="297" selection-start-line="297" selection-end-line="297" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/django/db/models/sql/query.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="1388" selection-start-line="1388" selection-end-line="1388" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/media/documents/2020/05/17/temp_LDhwop0.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -771,44 +814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="123" selection-start-line="123" selection-end-line="123" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DjangoModelDependency/#App">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DjangoModelDependency</ID>
-          <OriginalElement>#App</OriginalElement>
-          <nodes>
-            <node x="" y="">buy_rent_barter_app.models.Users</node>
-            <node x="" y="">buy_rent_barter_app.models.UserMessages</node>
-            <node x="" y="">buy_rent_barter_app.models.ProposalsTags</node>
-            <node x="" y="">buy_rent_barter_app.models.ProposalsItemsRequests</node>
-            <node x="" y="">buy_rent_barter_app.models.DesiredItemsQueries</node>
-            <node x="" y="">buy_rent_barter_app.models.PossibleItems</node>
-            <node x="" y="">buy_rent_barter_app.models.ProposalsCategories</node>
-            <node x="" y="">buy_rent_barter_app.models.Location</node>
-            <node x="" y="">buy_rent_barter_app.models.Images</node>
-            <node x="" y="">django.contrib.contenttypes.models.ContentType</node>
-            <node x="" y="">buy_rent_barter_app.models.AdditionalRequestsOffers</node>
-            <node x="" y="">buy_rent_barter_app.models.Complains</node>
-            <node x="" y="">buy_rent_barter_app.models.FavoriteProposals</node>
-            <node x="" y="">buy_rent_barter_app.models.ComplainsAnswers</node>
-            <node x="" y="">buy_rent_barter_app.models.ChainExchangeProposalsAnswers</node>
-            <node x="" y="">buy_rent_barter_app.models.Reviews</node>
-            <node x="" y="">buy_rent_barter_app.models.PossibleChainExchangeProposals</node>
-            <node x="" y="">buy_rent_barter_app.models.Proposals</node>
-            <node x="" y="">buy_rent_barter_app.models.Donations</node>
-            <node x="" y="">buy_rent_barter_app.models.ProposalItemsRequestsAnswers</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.40000000000000013" x="2294.0" y="1838.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -864,43 +869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/donate/liqp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
-          <caret line="131" column="65" selection-start-line="131" selection-start-column="65" selection-end-line="131" selection-end-column="65" />
-          <folding>
-            <element signature="e#149#162#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/chain_exchange/find_chain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/notify_email/email_notify.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="28" column="28" lean-forward="true" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/user_profile/user_profile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1934">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="67">
@@ -923,6 +891,192 @@
     <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/billing_views.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/migrations/0003_users_blocked_deadline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DjangoModelDependency/#App">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DjangoModelDependency</ID>
+          <OriginalElement>#App</OriginalElement>
+          <nodes>
+            <node x="591.5776014109349" y="929.6666666666669">buy_rent_barter_app.models.ComplaintsAnswers</node>
+            <node x="959.2500000000001" y="863.6666666666669">buy_rent_barter_app.models.PossibleItems</node>
+            <node x="983.9631834215169" y="205.5">buy_rent_barter_app.models.Users</node>
+            <node x="855.166666666667" y="696.6666666666666">django.contrib.contenttypes.models.ContentType</node>
+            <node x="651.25" y="-30.000000000000014">buy_rent_barter_app.models.AdditionalRequestsOffers</node>
+            <node x="1304.0" y="176.0">buy_rent_barter_app.models.ProposalsCategories</node>
+            <node x="1638.6003086419753" y="586.7500000000001">buy_rent_barter_app.models.Proposals</node>
+            <node x="549.4166666666669" y="690.0">buy_rent_barter_app.models.Complaints</node>
+            <node x="1285.9166666666672" y="959.5555555555554">buy_rent_barter_app.models.Images</node>
+            <node x="1226.2500000000002" y="716.920634920635">buy_rent_barter_app.models.FavoriteProposals</node>
+            <node x="1058.588183421517" y="1.25">buy_rent_barter_app.models.Location</node>
+            <node x="1650.0" y="191.0">buy_rent_barter_app.models.ProposalsTags</node>
+            <node x="1442.0462962962963" y="341.0">buy_rent_barter_app.models.DesiredItemsQueries</node>
+            <node x="570.2500000000001" y="120.0">buy_rent_barter_app.models.ProposalsItemsRequests</node>
+            <node x="636.7500000000001" y="517.5">buy_rent_barter_app.models.UserMessages</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="buy_rent_barter_app.models.Complaints" target="buy_rent_barter_app.models.Users">
+              <point x="-67.0" y="-92.0" />
+              <point x="898.6666666666666" y="662.5" />
+              <point x="1109.963183421517" y="638.5" />
+              <point x="0.0" y="136.0" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.Proposals" target="buy_rent_barter_app.models.ProposalsTags">
+              <point x="53.0" y="-235.0" />
+              <point x="1663.1003086419753" y="834.0" />
+              <point x="1831.916666666667" y="834.0" />
+              <point x="1831.916666666667" y="480.0" />
+              <point x="1871.25" y="480.0" />
+              <point x="71.75" y="37.0" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.PossibleItems" target="buy_rent_barter_app.models.Proposals">
+              <point x="71.75" y="-125.0" />
+              <point x="1448.1666666666667" y="941.9999999999998" />
+              <point x="1657.7669753086418" y="940.6666666666667" />
+              <point x="-88.33333333333348" y="235.0" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.PossibleItems" target="django.contrib.contenttypes.models.ContentType">
+              <point x="-71.75" y="-125.0" />
+              <point x="81.5" y="59.0" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.ProposalsItemsRequests" target="buy_rent_barter_app.models.Users">
+              <point x="86.25" y="-147.0" />
+              <point x="1012.7499999999999" y="126.25000000000017" />
+              <point x="1027.891754850088" y="290.0000000000001" />
+              <point x="-113.57142857142856" y="136.0" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.Proposals" target="buy_rent_barter_app.models.Users">
+              <point x="-106.0" y="-235.0" />
+              <point x="1653.4942480359148" y="654.3030303030304" />
+              <point x="1326.4942680776014" y="644.0" />
+              <point x="1311.4942680776014" y="470.0" />
+              <point x="1194.6774691358028" y="492.5" />
+              <point x="75.71428571428578" y="136.0" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.ComplaintsAnswers" target="buy_rent_barter_app.models.Users">
+              <point x="-78.25" y="-92.0" />
+              <point x="613.8276014109348" y="998.666666666667" />
+              <point x="541.9166666666667" y="1000.6666666666669" />
+              <point x="550.9166666666669" y="508.0" />
+              <point x="1043.2488977072312" y="492.5" />
+              <point x="-75.71428571428567" y="136.0" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.FavoriteProposals" target="buy_rent_barter_app.models.Proposals">
+              <point x="78.25" y="-59.0" />
+              <point x="1484.7460317460318" y="875.7460317460319" />
+              <point x="1642.3225308641975" y="884.7936507936508" />
+              <point x="0.0" y="235.0" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.Proposals" target="buy_rent_barter_app.models.DesiredItemsQueries">
+              <point x="0.0" y="-235.0" />
+              <point x="1651.766975308642" y="844.0" />
+              <point x="1597.0462962962963" y="844.0" />
+              <point x="0.0" y="114.0" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.ProposalsItemsRequests" target="buy_rent_barter_app.models.ProposalsItemsRequests">
+              <point x="0.0" y="147.0" />
+              <point x="742.7500000000001" y="434.0" />
+              <point x="550.2500000000001" y="434.0" />
+              <point x="550.2500000000001" y="267.0" />
+              <point x="-172.5" y="-0.0" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.DesiredItemsQueries" target="buy_rent_barter_app.models.ProposalsCategories">
+              <point x="0.0" y="-114.0" />
+              <point x="1597.0462962962963" y="480.0" />
+              <point x="1554.5" y="480.0" />
+              <point x="81.5" y="48.0" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.ComplaintsAnswers" target="buy_rent_barter_app.models.Complaints">
+              <point x="78.25" y="-92.0" />
+              <point x="650.5498236331571" y="996.5555555555559" />
+              <point x="649.6944444444447" y="999.8888888888891" />
+              <point x="0.0" y="92.0" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.DesiredItemsQueries" target="buy_rent_barter_app.models.Users">
+              <point x="-108.66666666666652" y="-114.0" />
+              <point x="1488.3796296296298" y="460.0" />
+              <point x="1446.0640237576513" y="447.7941176470588" />
+              <point x="113.57142857142856" y="136.0" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.Complaints" target="django.contrib.contenttypes.models.ContentType">
+              <point x="67.0" y="-92.0" />
+              <point x="742.2500000000001" y="884.0" />
+              <point x="856.0000000000001" y="867.9999999999999" />
+              <point x="-81.5" y="59.0" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.FavoriteProposals" target="buy_rent_barter_app.models.Users">
+              <point x="-78.25" y="-59.0" />
+              <point x="1303.0079365079368" y="684.0000000000001" />
+              <point x="1167.2387566137568" y="670.6666666666669" />
+              <point x="1172.355469965764" y="611.3445378151262" />
+              <point x="1156.8203262786596" y="502.5" />
+              <point x="37.85714285714289" y="136.0" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.Proposals" target="buy_rent_barter_app.models.Location">
+              <point x="106.0" y="-235.0" />
+              <point x="1716.1003086419753" y="844.0" />
+              <point x="1953.5" y="844.0" />
+              <point x="1953.5" y="143.0" />
+              <point x="1313.588183421517" y="143.0" />
+              <point x="63.75" y="59.0" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.Images" target="buy_rent_barter_app.models.Proposals">
+              <point x="0.0" y="-48.0" />
+              <point x="1388.5833333333335" y="975.388888888889" />
+              <point x="1623.7114197530866" y="982.8888888888888" />
+              <point x="88.33333333333348" y="235.0" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.DesiredItemsQueries" target="buy_rent_barter_app.models.ProposalsTags">
+              <point x="108.66666666666652" y="-114.0" />
+              <point x="1705.7129629629628" y="480.0" />
+              <point x="1727.75" y="480.0" />
+              <point x="-71.75" y="37.0" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.Users" target="buy_rent_barter_app.models.Location">
+              <point x="0.0" y="-136.0" />
+              <point x="1118.963183421517" y="165.5" />
+              <point x="1121.088183421517" y="143.0" />
+              <point x="-63.75" y="59.0" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.UserMessages" target="buy_rent_barter_app.models.Users">
+              <point x="0.0" y="-59.0" />
+              <point x="1084.25" y="544.0" />
+              <point x="1081.1060405643739" y="502.5" />
+              <point x="-37.85714285714289" y="136.0" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.Proposals" target="buy_rent_barter_app.models.ProposalsCategories">
+              <point x="-53.0" y="-235.0" />
+              <point x="1712.1003086419753" y="599.0" />
+              <point x="1365.8871252204585" y="604.0" />
+              <point x="-81.5" y="48.0" />
+            </edge>
+            <edge source="buy_rent_barter_app.models.ProposalsItemsRequests" target="buy_rent_barter_app.models.AdditionalRequestsOffers">
+              <point x="-86.25" y="-147.0" />
+              <point x="0.0" y="59.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.6000000000000001" x="674.0" y="687.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -937,21 +1091,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/billing_views.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/user_profile/user_profile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1445">
+          <caret line="92" column="34" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/djangs.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/proposals_requests/proposals_requests.py">
+    <entry file="file://$PROJECT_DIR$/locustfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2737">
-          <caret line="166" column="3" selection-start-line="166" selection-start-column="3" selection-end-line="166" selection-end-column="3" />
+        <state relative-caret-position="102">
+          <caret line="6" column="41" selection-end-line="6" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="47" column="3" selection-start-line="47" selection-end-line="47" selection-end-column="12" />
           <folding>
-            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/п.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/chain_exchange/chain_exchange.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="37" column="25" selection-start-line="37" selection-end-line="38" />
+          <folding>
+            <element signature="e#1#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -963,94 +1155,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/п.html">
+    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/chain_exchange/find_chain.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="436">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/donate/donate.py">
+    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/get_values/get_json_values_of_model.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/donate/liqp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        <state relative-caret-position="382">
+          <caret line="131" column="65" selection-start-line="131" selection-start-column="65" selection-end-line="131" selection-end-column="65" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="579" column="16" lean-forward="true" selection-start-line="579" selection-start-column="6" selection-end-line="579" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/complain/complain_handler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="2" selection-start-line="1" selection-end-line="6" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/chain_exchange/chain_exchange.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
-          <folding>
-            <element signature="e#1#23#0" expanded="true" />
+            <element signature="e#149#162#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/handle_users/change_status.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="47" column="3" selection-start-line="47" selection-end-line="47" selection-end-column="12" />
+        <state relative-caret-position="187">
+          <caret line="11" column="8" lean-forward="true" selection-start-line="10" selection-end-line="63" selection-end-column="38" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="63" column="10" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/system_entrence/system_entrence_.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="104" column="11" lean-forward="true" selection-start-line="103" selection-start-column="7" selection-end-line="107" selection-end-column="68" />
+        <state relative-caret-position="-43">
+          <caret line="105" column="39" selection-start-line="105" selection-start-column="39" selection-end-line="105" selection-end-column="39" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/proposals/crud_proposals.py">
+    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/proposals_requests/proposals_requests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="248" column="10" selection-start-line="248" selection-start-column="10" selection-end-line="248" selection-end-column="10" />
+        <state relative-caret-position="-5449">
+          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/donate/donate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="6" column="8" lean-forward="true" selection-start-line="4" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="27" column="46" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/notify_email/email_notify.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/complain/complain_handler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="33" column="4" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buy_rent_barter_app/proposals/crud_proposals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="24" lean-forward="true" selection-end-line="979" />
         </state>
       </provider>
     </entry>

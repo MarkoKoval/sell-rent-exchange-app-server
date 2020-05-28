@@ -76,18 +76,22 @@ os.getenv('DJANGO_LOG_LEVEL', 'INFO')
 
 @csrf_exempt
 def get_profile(request):
+    print(1111111111111111111)
     logger.info("Test!!")
     #sys.stderr.write("fewf\n")
     #print(2366)
    # print(12)
    # print(3666)
    # logging.warning("DataFlair Logging Tutorials")
-
+    print("GET_PROFILE")
+    print(request.GET)
     if request.method == "GET":
-       # print(request.GET)
+        print("GET_PROFILE")
+        print(request.GET)
 
         auth = get_auth_token(request.GET["id"])
-       # print(auth)
+        print(request.GET["token"])
+        print(auth)
        # print(request.GET["token"])
         if request.GET["token"] == auth:
             try:

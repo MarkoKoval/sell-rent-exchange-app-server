@@ -7,8 +7,8 @@ import json
 from ..models import Users
 @csrf_exempt
 def PayView(request, id):
-        print(11223)
-        template_name = 'pay.html'
+       # print(11223)
+       # template_name = 'pay.html'
         name = Users.objects.get(id = id).name
         print(name)
 

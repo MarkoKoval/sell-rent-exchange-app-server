@@ -3,40 +3,17 @@ from ..models import *
 from django.http import HttpResponse,JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.db.models import Q
-"""
-@csrf_exempt
-def find_results(deep, basic_proposal, available):
-    results = []
-    for obj in available:
-        for wished in obj.wished_items.all():
-            for basic_wished in basic_proposal.wished_items.all():
-                if basic_wished.category.category == wished.category.category and  basic_wished.category.subcategory == wished.category.subcategory:
-                    if len(list(set(wished.query_description_tags).intersection(basic_wished.query_description_tags))) > 0:
-                        pass
-
 
 @csrf_exempt
-def find_possible_variants(r, id):
-    user = r.GET["user"]
-    basic_proposal = Proposals.objects.get(id = id)
-    available = Proposals.objects.filter(Q(proposal_type = 'Оренда') |  Q(is_blocked_by_admin = False)
-                             | ~Q(creator_id = user["id"]) | Q(available_items__gte = 0) |
-                                         ~Q(wished_items = None)).v
-    deep_count = 3
-
-    return
-"""
-
-
-def comparator(search, wished):
+def comparator(search, wished, compare_name = ""):
     print("length " + str(search.count()))
     for search_for in search:
-        """
+
         category = search_for.category.category == wished.category.category and \
                    search_for.category.subcategory == wished.category.subcategory
         if not category and search_for.category != "Інше":
             continue
-        """
+
         proposal_type = True if search_for.proposal_item_type == "Нема значення" else\
             search_for.proposal_item_type == wished.proposal_item_type
         if not proposal_type:
@@ -44,6 +21,7 @@ def comparator(search, wished):
         wished_tags = [i.title.lower() for i in wished.search_tags.all()]
         #print(dir(search_for))
         search_tags = [  i.title.lower() for i in search_for.query_description_tags.all()]
+        print(compare_name)
         print("wished: " + str(wished_tags))
         print("searched: " + str(search_tags))
 
@@ -57,8 +35,8 @@ def comparator(search, wished):
     #if tags == 0:
     #    return False
     return False
-
-
+#формування варіантів ланцюгового обміну з 2 можливих учасників
+@csrf_exempt
 def simple(id, searched_for,own, possible):
     result = []
    # print("****????????????????????****")
@@ -67,12 +45,13 @@ def simple(id, searched_for,own, possible):
      #   for searched in searched_for:
         if comparator(searched_for, possible[i]) and comparator(possible[i].wished_items.all(),own):
        #     print("JSON " + str(possible[i].json()))
+
             result.append([id, possible[i].id] )
     print("***!!!!!!!!!!!!!!!!!1********")
 
     return result
 
-
+@csrf_exempt
 def find_possibille_chain(id, searched_for, own, possible):
     result = []
     a = "ff"
@@ -90,34 +69,49 @@ def find_possibille_chain(id, searched_for, own, possible):
                 print("******************************************")
                 print(str(own.id) +" 1 "+str(possible[i].id))
                 """
-                first = comparator(searched_for, possible[i])
+                first_second = comparator(searched_for, possible[i])
                 """
                 print(str(own.id) +" 2 "+str(possible[j].id))
                 """
-                second = comparator(searched_for, possible[j])
+                first_third = comparator(searched_for, possible[j])
 
-                if  first or second:
+                if  first_second or first_third:
                     pass
                 else:
                     continue
                 #print(str(possible[j].id) + " 3 " + str(possible[i].id))
-                third = comparator(possible[j].wished_items.all(), possible[i])
+                third_second = comparator(possible[j].wished_items.all(), possible[i])
                 #print(str(possible[j].id) + " 4 " + str(own.id))
-                fourth = comparator(possible[j].wished_items.all(), own)
-                if  third or fourth:
+                third_first = comparator(possible[j].wished_items.all(), own)
+                if  third_second or third_first:
                     pass
                 else:
                     continue
                 #print(str(possible[i].id) + " 5 " + str(possible[j].id))
-                fifth = comparator(possible[i].wished_items.all(),possible[j])
+                second_third = comparator(possible[i].wished_items.all(),possible[j])
                 #print(str(possible[i].id) + " 6 " + str(own.id))
-                sixth = comparator(possible[i].wished_items.all(),own)
-                if  fifth or sixth:
+                second_first = comparator(possible[i].wished_items.all(),own)
+                if  second_first or second_third:
                     pass
                 else:
                     continue
 
-                result.append([id, possible[i].id, possible[j].id])
+                """
+                print(first_second)
+                print(first_third)
+                print(third)
+                print(fourth)
+                print(fifth)
+                print(sixth)
+                """
+               # print( possible[i].title)
+               # print(possible[j].title)
+
+
+                if (first_second and second_third and third_first):
+                    result.append([id, possible[i].id, possible[j].id])
+                if (first_third and third_second and second_first):
+                    result.append([id, possible[j].id,  possible[i].id])
             #    print(str(possible[j].id) + " 3 " + str(possible[i].id))
                 """
                 if comparator(searched_for, possible[i]) and \
@@ -132,6 +126,7 @@ def find_possibille_chain(id, searched_for, own, possible):
     #     print(result)
     return result
 
+@csrf_exempt
 def find_possible_variants(id, user_id):
     own = Proposals.objects.get(id=id)
     searched_for = Proposals.objects.get(id=id).wished_items.all()
@@ -167,7 +162,7 @@ def find_possible_variants(id, user_id):
     return result
    # print(res)
 
-
+@csrf_exempt
 def chain_exchange_variants(r, id):
     print(r.GET)
     print(1333333333333344)

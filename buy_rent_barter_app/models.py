@@ -37,6 +37,7 @@ class Users(models.Model):
     location = models.OneToOneField(Location, on_delete=models.CASCADE, default=None, null=True)
     role = models.CharField(max_length=15, default="Звичайний")  # admin vip
     is_blocked_by_admin = models.BooleanField(default=False)
+    blocked_deadline = models.DateTimeField(default=None, null=True, blank=True)
     time_entered = models.DateTimeField(auto_now_add=True)
     coplaints_involved = GenericRelation("Complaints", related_query_name='complains_to_user', default=None, null=True, blank=True)
 
@@ -572,6 +573,9 @@ class UserMessages(models.Model):
             "time_send": self.time_send,
         }
 
+    class Meta:
+        ordering = ["-time_send"]
+
 
 # request = GenericForeignKey("topic_id")
 
@@ -621,7 +625,7 @@ class Complaints(models.Model):
            return answer.json()
         except Exception as e:
             return None
-    def g(self):
+    def get_object_user(self):
         res = None
         print(222)
         try:
@@ -630,8 +634,9 @@ class Complaints(models.Model):
             if  str(self.content_type) == "proposals":
                 res = Proposals.objects.get(id=self.object_id).creator_id
             elif  str(self.content_type) == "users":
-                res = Users.objects.get(id=self.object_id).creator_id
+                res = Users.objects.get(id=self.object_id)
             print(res)
+            print("oBJECT")
         except Exception as e:
             print(e)
             print(res)
@@ -647,7 +652,7 @@ class Complaints(models.Model):
             "content_type": str(self.content_type),
             "answer": self.get_answer(),
             "object_id": self.object_id,
-            "object_user": self.g()
+            "object_user": self.get_object_user()
        #     "complain_object": self.content_type
         }
     class Meta:
