@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-
+DATA_UPLOAD_MAX_MEMORY_SIZE = 2*5242880
 #TIME_ZONE = 'Europe/Istanbul'
 
 #TIME_ZONE = 'UTC'

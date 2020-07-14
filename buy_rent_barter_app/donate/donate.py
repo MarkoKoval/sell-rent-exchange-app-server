@@ -10,7 +10,7 @@ def PayView(request, id):
        # print(11223)
        # template_name = 'pay.html'
         name = Users.objects.get(id = id).name
-        print(name)
+        #print(name)
 
         liqpay = LiqPay("i14834950111", "MOd35a45stEweq6tlDeY83HmPkCGe8nbyCdZ9vEV")
         params = {
@@ -18,15 +18,20 @@ def PayView(request, id):
             'action': 'paydonate',
             'amount': '1',
             'currency': 'UAH',
-            'description': 'Donate від для підтримки платформи '+ name,
+            'description': 'Donate від ' +name+ ' для підтримки платформи ',
             'version': '3',
             'sandbox': 0, # sandbox mode, set to 1 to enable it
             'server_url': '127.0.0.1:8000/pay-callback/', # url to callback view
+
+            "receiver_first_name": "first name",
+            "receiver_last_name": "last name"
+
+
         }
         signature = liqpay.cnb_signature(params)
         data = liqpay.cnb_data(params)
-        print(signature)
-        print(data)
+        #print(signature)
+        #print(data)
         return JsonResponse(json.dumps({'signature': signature, 'data': data}), content_type="application/json", safe=False)
         #return render(request, template_name, {'signature': signature, 'data': data})
 

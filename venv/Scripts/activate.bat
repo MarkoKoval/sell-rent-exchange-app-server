@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=C:\Users\Acer\Desktop\семестр88\App\venv"
+set "VIRTUAL_ENV=C:\Users\Acer\Desktop\Папка на здачу\Код\Check\Server\venv"
 
 if not defined PROMPT (
     set "PROMPT=$P$G"

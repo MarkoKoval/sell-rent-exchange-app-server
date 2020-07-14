@@ -1,4 +1,4 @@
-#!C:\Users\Acer\Desktop\семестр88\App\venv\Scripts\python.exe -x
+#!"C:\Users\Acer\Desktop\Папка на здачу\Код\Check\Server\venv\Scripts\python.exe" -x
 # EASY-INSTALL-ENTRY-SCRIPT: 'setuptools==39.1.0','console_scripts','easy_install'
 __requires__ = 'setuptools==39.1.0'
 import re

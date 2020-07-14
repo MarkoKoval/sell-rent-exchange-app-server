@@ -1,4 +1,4 @@
-#!C:\Users\Acer\Desktop\семестр88\App\venv\Scripts\python.exe
+#!"C:\Users\Acer\Desktop\Папка на здачу\Код\Check\Server\venv\Scripts\python.exe"
 # EASY-INSTALL-ENTRY-SCRIPT: 'bcrypt-tool==1.0','console_scripts','bcrypt-tool'
 __requires__ = 'bcrypt-tool==1.0'
 import re

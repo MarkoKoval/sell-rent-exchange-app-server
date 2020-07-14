@@ -7,6 +7,7 @@ import datetime
 from django.db.models import Avg, Max, Min, Sum
 from django.db import transaction
 
+
 class Location(models.Model):
     lat = models.FloatField(null=True, blank=True, default=None)
     long = models.FloatField(null=True, blank=True, default=None)
@@ -29,19 +30,13 @@ class Users(models.Model):
     password_hash = models.CharField(max_length=64, default="")
     email = models.CharField(max_length=100, null=True, blank=True, unique=True)
     self_description = models.TextField(default="Шукаю можливості обміну, продажу, оренди товарів і послуг")
-    """
-    current_location_lat = models.FloatField(null=True, blank=True, default=None)
-    current_location_long = models.FloatField(null=True, blank=True, default=None)
-    current_location_str = models.CharField(default="",max_length=256)
-    """
     location = models.OneToOneField(Location, on_delete=models.CASCADE, default=None, null=True)
     role = models.CharField(max_length=15, default="Звичайний")  # admin vip
     is_blocked_by_admin = models.BooleanField(default=False)
     blocked_deadline = models.DateTimeField(default=None, null=True, blank=True)
     time_entered = models.DateTimeField(auto_now_add=True)
-    coplaints_involved = GenericRelation("Complaints", related_query_name='complains_to_user', default=None, null=True, blank=True)
-
-
+    coplaints_involved = GenericRelation("Complaints", related_query_name='complains_to_user', default=None, null=True,
+                                         blank=True)
 
     # complains = GenericRelation("Complains")
 
@@ -92,12 +87,6 @@ class ProposalsCategories(models.Model):
         return {"category": self.category, "subcategory": self.subcategory}
 
 
-"""
-class Document(models.Model):
-    docfile = models.FileField(upload_to='documents/%Y/%m/%d')
-"""
-
-
 # фото для опису містять хешкоди щоб уникати дублікатів
 class Images(models.Model):
     path = models.FileField(upload_to='documents/%Y/%m/%d', default=None)
@@ -113,16 +102,6 @@ class Images(models.Model):
     def json(self):
         return {"url": self.path.url, "path": self.path.path, "proposal": self.proposal.id}
     #  unique_together = ["uploader_user_id", "image_hash"]
-
-
-# ProposalsItemsGetConditions
-# редагування, видалення оглошення програмно можливе коли немає затверджених запитів купівлі, оренди, обміну
-# редагування, видалення програмно неможливе, якщо є назадоволений запит клієнта (непогоджений),
-# його можна зробити невидимим для при пошуку
-# чи є погодженні запити купівлі, оренди, обміну
-# якщо оголошення погодженно можна створити нове оголошення на основі цього яке б ви хотіли редагувати
-# і вже його редагувати
-# оголошення
 
 
 class Proposals(models.Model):
@@ -147,7 +126,8 @@ class Proposals(models.Model):
     item_price_value = models.FloatField(null=True, blank=True)
     item_price_currency = models.CharField(max_length=10, null=True, blank=True)  # USD EUR default="Гривня"
     wished_items = models.ManyToManyField('DesiredItemsQueries', blank=True, null=True, related_name='desired_items')
-    coplaints_involved = GenericRelation("Complaints"    , related_query_name = 'complains_to_proposal', default = None, null = True, blank = True)
+    coplaints_involved = GenericRelation("Complaints", related_query_name='complains_to_proposal', default=None,
+                                         null=True, blank=True)
 
     # complains = GenericRelation("Complains")
 
@@ -155,10 +135,10 @@ class Proposals(models.Model):
         ordering = ["-creation_time"]
         # ordering = ["creator_id", "title"]
         unique_together = ["title", "creator_id"]
+
     def is_in_deal(self):
         return PossibleItems.objects.filter(Q(proposal_item_id_id=self.id) &
-                                     Q(waited_for_deal=True)).exists()
-
+                                            Q(waited_for_deal=True)).exists()
 
     def get_category(self):
         return ProposalsCategories.objects.get(id=self.category_id).json()
@@ -180,23 +160,22 @@ class Proposals(models.Model):
             "location": Location.objects.get(id=self.location.id).json() if self.location else None}
 
     def get_available(self):
-        print("fefwfewfwfwfwef")
-        print(PossibleItems.objects.count())
+        # print(PossibleItems.objects.count())
         res = PossibleItems.objects.filter(Q(proposal_item_id_id=self.id) &
                                            Q(accepted_for_deal=True)).aggregate(Sum('proposal_item_count'))
-        print(self.total_items)
-        print("Available" + str(res))
+        # print(self.total_items)
+        # print("Available" + str(res))
         if self.total_items != None:
             if res["proposal_item_count__sum"] == None:
                 return self.total_items
             else:
-                self.available_items =  self.total_items - res["proposal_item_count__sum"]
+                self.available_items = self.total_items - res["proposal_item_count__sum"]
                 self.save()
                 return self.available_items
         else:
             return None
 
-    def json(self):
+    def json(self, add_wished_items=True):
         return {
             "id": self.id,
             "title": self.title,
@@ -205,6 +184,8 @@ class Proposals(models.Model):
             "search_tags": [i.json() for i in self.search_tags.all()] if self.search_tags else None,
             # Location.objects.get(id=self.location.id).json() if self.location else None,
             "creator_id": self.creator_id.id,
+            "creator_name": self.creator_id.name,
+            "creator_is_blocked": self.creator_id.is_blocked_by_admin,
             "proposal_type": self.proposal_type,
             "proposal_item_type": self.proposal_item_type,
             "proposal_item_state": self.proposal_item_state,
@@ -217,30 +198,13 @@ class Proposals(models.Model):
             "item_price_value": self.item_price_value,
             "item_price_currency": self.item_price_currency,
             "images": [i.json() for i in Images.objects.filter(proposal_id=self.id)],
-            "wished_items": [i.json() for i in self.wished_items.all()],
+            "wished_items": [i.json() for i in self.wished_items.all()] if add_wished_items else [],
+            "waited_for_deal": waited(self),
             "creation_time": self.creation_time + datetime.timedelta(hours=3)
 
             #  "wished_items": [i.json() for i in self.search_tags.all()]
             # "complains":  Complains.objects.filter(object_id = self.id).json()
         }
-
-
-# /advertisements  /advertisements/<:ad_id> /advertisements/users/<:user_id>  /advertisements/goods/<:ad_type>
-# /advertisements/goods/<:state>  /advertisements/services/<:ad_type>
-# опис бажаних умов продажу для SELL/AUCTION
-
-
-# опис бажаних умов відданя товару чи послуги
-"""
-class ProposalsItemsGetConditions(models.Model):
-    proposal_id = models.OneToOneField(Proposals, on_delete=models.CASCADE, default=None)
-    rent_time_unit_measure = models.CharField(max_length=10,
-                                              default="Хвилина")  # "MINUTE","HOUR","DAY","MONTH","YEAR" ЯКЩО ОРЕНДА
-    item_price_value = models.FloatField(default=1)
-    item_price_currency = models.CharField(max_length=10, default="Гривня")  # USD EUR
-    wished_items = models.ManyToManyField('DesiredItemsQueries', blank=True, related_name='desired_items')
-    #
-"""
 
 
 #  /advertisements/user/distances/<:user_id>
@@ -303,24 +267,6 @@ class DesiredItemsQueries(models.Model):
 
 
 # теги для опису бажаного товару чи послуги
-"""
-class DesiredItemsDescriptionTags(models.Model):
-    title = models.CharField(max_length=256, unique=True, null=True, blank=True)
-
-    class Meta:
-        ordering = ["title"]
-"""
-
-# повідомлення від системи про наявність бажаного обєкта за критерыями описаного в оголошенні
-"""
-class DesiredItemExistenceNotifications(models.Model):
-    query_id = models.ForeignKey(DesiredItemsQueries, on_delete=models.CASCADE,default=None)
-    proposal_id = models.ForeignKey(Proposals, on_delete=models.CASCADE,default=None)
-    notification_time = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        ordering = ["query_id"]
-"""
 
 
 #   users/desired/advertisements/notifications/<:user_id>
@@ -396,25 +342,29 @@ class ProposalsItemsRequests(models.Model):
     def get_main_proposal(self):
         p = PossibleItems.objects.filter(Q(object_id=self.id) & Q(content_type__model__startswith="P")
                                          & Q(type="request"))
-        print(' PPPPPP')
+
         #   print(p[0].proposal_item_id_id)
         #    print(p)
-        print(None if len(p) == 0 else p[0].proposal_item_id.json())
+        #print(None if len(p) == 0 else p[0].proposal_item_id.json())
         return None if len(p) == 0 else p[0].proposal_item_id_id
+
     """
     def answer_(self):
         p = ProposalItemsRequestsAnswers.objects.filter(request_id_id=self.id)
 
         return None if p.count() == 0 else p[0].json()
     """
+
     @transaction.atomic
     def approve_request_item_get(self):
         try:
             self.requested_object_received = datetime.datetime.now()
             self.save()
-            self.items.all().filter(proposal_item_id_creator_id_id = self.request_user_id_id).update(accepted_for_deal=True)
+            self.items.all().filter(proposal_item_id_creator_id_id=self.request_user_id_id).update(
+                accepted_for_deal=True)
         except Exception as e:
             print(e)
+
     def answered(self):
         try:
             return ProposalsItemsRequests.objects.get(answered_request_id=self.id).id
@@ -424,33 +374,47 @@ class ProposalsItemsRequests(models.Model):
     def reanswer_for_request_proposal(self):
         p = ProposalsItemsRequests.objects.filter(answered_request_id=self.id)
         count = p.count()
-        return None if count == 0 else p[count-1].answer_type
+        return None if count == 0 else p[count - 1].answer_type
+
     def reanswer_wish(self):
         p = ProposalsItemsRequests.objects.filter(answered_request_id=self.id)
         count = p.count()
-        return None if count == 0 else p[count-1].request_main_item
+        return None if count == 0 else p[count - 1].request_main_item
+
+    def g(self):
+
+        print(str(self.request_time) + " " + str(self.id) + " count" + str(self.items.all().count()))
+
+        return None
+
     def simple_json(self):
-        return {"id": self.id, "request_user_id": self.request_user_id.id if self.request_user_id else None,
-                "requested_user_id": self.requested_user_id.id if self.requested_user_id else None,
-                "main_item": self.items.all().count(),
-                "answered": self.answered(),
-                "author": self.request_user_id.name,
-                "answer_user": self.requested_user_id.name,
-                "request_main_item": self.request_main_item, "answer": "", # self.answer_(),
-                "requested_main_item": self.items.all()[
-                    0].proposal_item_id.id if self.items.all().count() != 0 else None,  # self.get_main_proposal(),
-                "request_message": self.request_message,  # "type": self.type,
-                "request_time": self.request_time + datetime.timedelta(hours=3),
-                "request_deadline_for_answer": self.request_deadline_for_answer,
-                "answer_type": self.answer_type,
-                "title": self.items.all().filter(
-                    type="запит").first().proposal_item_id.title if self.items.all().count() != 0 else None,  ###
-                # "total_accept_approve_answer": self.total_accept_approve_answer,
-                "requested_object_received": self.requested_object_received,
-                "answered_request": self.answered_request.id if self.answered_request else None,
-                "reanswer_for_request_proposal": self.reanswer_for_request_proposal(),
-                "reanswer_wish": self.reanswer_wish()
-                }
+        """
+        return {
+            "items": self.g()}
+        """
+        return {
+            #   "items": self.g(),
+            "id": self.id, "request_user_id": self.request_user_id.id if self.request_user_id else None,
+            "requested_user_id": self.requested_user_id.id if self.requested_user_id else None,
+            "main_item": self.items.all().count(),
+            "answered": self.answered(),
+            "author": self.request_user_id.name,
+            "answer_user": self.requested_user_id.name,
+            "request_main_item": self.request_main_item, "answer": "",  # self.answer_(),
+            "requested_main_item": self.items.all()[
+                0].proposal_item_id.id if self.items.all().count() != 0 else None,  # self.get_main_proposal(),
+            "request_message": self.request_message,  # "type": self.type,
+            "request_time": self.request_time + datetime.timedelta(hours=3),
+            "request_deadline_for_answer": self.request_deadline_for_answer,
+            "answer_type": self.answer_type,
+            "title": self.items.all().filter(
+                type="запит").first().proposal_item_id.title if self.items.all().count() != 0 else None,  ###
+            # "total_accept_approve_answer": self.total_accept_approve_answer,
+            "requested_object_received": self.requested_object_received,
+            "answered_request": self.answered_request.id if self.answered_request else None,
+            "reanswer_for_request_proposal": self.reanswer_for_request_proposal(),
+            "reanswer_wish": self.reanswer_wish()
+        }
 
     def items_json(self):
         return {"res": [i.json() for i in self.items.all()]}
@@ -466,93 +430,6 @@ class ProposalsItemsRequests(models.Model):
 
 
 # відповідь можливому покупцю на запит купівлі
-"""
-class ProposalItemsRequestsAnswers(models.Model):
-    request_id = models.OneToOneField(ProposalsItemsRequests, on_delete=models.CASCADE)
-    accept_request = models.BooleanField(default=True)
-    answer_message = models.TextField(default="")
-    answer_time = models.DateTimeField(auto_now_add=True)
-    wished_items = GenericRelation(
-        "PossibleItems")  # models.ManyToManyField('PossibleItems', blank=True, related_name="wished_items_")
-    additional_money_offers = models.ForeignKey(AdditionalRequestsOffers, on_delete=models.CASCADE, default=None)
-    back_answer_deadline = models.DateTimeField(default=None)
-    #   accepted_time_by_requested_user = models.DateTimeField(default=None) # той хто швидше погодить якщо морочить голову робиться запит до адміна щоб обмежив його дії
-    confirm_requested_object_give_action = models.DateTimeField(default=None)
-
-    def wished(self):
-        w = self.wished_items.all()
-        return None if len(w) == 0 else [i.json() for i in w]
-
-    def json(self):
-        return {"id": self.request_id_id, "accept_request": self.accept_request,
-                'answer_message': self.answer_message, 'answer_time': self.answer_time, "wished_items": self.wished,
-                # self.wished_items.all(),
-                'additional_money_offers': self.additional_money_offers,
-                'back_answer_deadline': self.back_answer_deadline,
-                'confirm_requested_object_give_action': self.confirm_requested_object_give_action}
-"""
-
-#   users/requests/buy/answers/<:buy_request_id> users/requests/buy/answers/
-
-
-#   згенерований можливий ланцюговий обмін  ДУМАЙ потім додаються сюди
-"""
-class PossibleChainExchangeProposals(models.Model):
-    chain_exchange_id = models.IntegerField()
-    user_id = models.ForeignKey(Users, on_delete=models.CASCADE)
-    chain_exchange_proposal_items = GenericRelation(
-        PossibleItems)  # models.ManyToManyField('PossibleItems', blank=True,
-    #                   related_name="items_for_chain_exchange")  # елементи які пропонуються для обміну
-    additional_money_offers = models.ForeignKey(AdditionalRequestsOffers, on_delete=models.CASCADE, default=None)
-    proposal_message = models.TextField(default="")
-    creation_time = models.DateTimeField(auto_now_add=True)
-    reject_proposal_at_all = models.DateTimeField(default=None)
-    exchange_approve = models.DateTimeField(default=None)
-"""
-
-# review = GenericRelation('Reviews')
-
-
-"""
-class Wishes(models.Model): #ProposalItemsRequestsAnswers
-    wanted_items = models.ManyToManyField('PossibleItems', blank=True, related_name='wanted_items_')
-    additional_money_offers = models.ForeignKey(AdditionalRequestsOffers,on_delete=models.CASCADE , default=None)
-    approve_deadline_for_previous = models.DateTimeField(default=None)
-    approve_accepted = models.DateTimeField(default=None)
-"""
-
-"""
-class ChainExchangeProposalsAnswers(models.Model):
-    chain_exchange_block_id = models.OneToOneField(PossibleChainExchangeProposals, on_delete=models.CASCADE)
-    accept_exchange_conditions = models.BooleanField(default=True)
-    wished_items = GenericRelation("PossibleItems",
-                                   blank=True)  # models.ManyToManyField('PossibleItems', blank=True, related_name="items_for_chain_exchange")
-    additional_money_offers = models.ForeignKey(AdditionalRequestsOffers, on_delete=models.CASCADE, default=None)
-
-    answer_message = models.TextField(default="")  # відповідь на запропоновані речі для обміну
-    answer_time = models.DateTimeField(auto_now_add=True)
-    back_deadline_answer = models.DateTimeField(default=None)
-"""
-
-# gen
-
-# gen
-
-"""
-class Reviews(models.Model):
-    reviewer_id = models.ForeignKey(Users, on_delete=models.CASCADE)
-    # review_object_type = models.CharField(max_length=15, default="Продаж") #exchange "chain exchange" "rent" "sell"
-    #  review_object = models.ForeignKey(ContentType, on_delete=models.CASCADE, default=None)  #
-    #  object_id = models.PositiveIntegerField(default=None)
-    #  content_object = GenericForeignKey('review_object', 'object_id')
-    reviewed_simple_proposal = models.ForeignKey(Proposals, on_delete=models.CASCADE, default=None, null=True,
-                                                 blank=True)
-    reviewed_chain_proposal = models.ForeignKey(PossibleChainExchangeProposals, on_delete=models.CASCADE, default=None,
-                                                null=True, blank=True)
-    review_text = models.TextField(default="")
-    review_mark = models.CharField(max_length=10, default="добре")  # погано задовільно відмінно
-    review_time = models.DateTimeField(auto_now_add=True)
-"""
 
 
 ##gen
@@ -595,20 +472,22 @@ class ComplaintsAnswers(models.Model):
         return {
             "id": self.id,
             "complain_id": self.complain_id.id,
-                "arbiter": {"name": self.arbiter.name, "id": self.arbiter.id},
-                "sanction": self.sanction,
-                "answer_text": self.answer_text,
-                "approve_complain": self.approve_complain,
-                "sanction_deadline": self.sanction_deadline,
-                "answer_time": self.answer_time
-                }
+            "arbiter": {"name": self.arbiter.name, "id": self.arbiter.id},
+            "sanction": self.sanction,
+            "answer_text": self.answer_text,
+            "approve_complain": self.approve_complain,
+            "sanction_deadline": self.sanction_deadline,
+            "answer_time": self.answer_time,
+            "complain_type": str(self.complain_id.content_type)
+        }
 
     class Meta:
         ordering = ["-answer_time"]
 
+
 class Complaints(models.Model):
-   # topic_type = models.CharField(max_length=30,
-   #                               default="Поганий контент")  # "BAD CONTENT","SELL","RENT","EXCHANGE","CHAIN_EXCHANGE"
+    # topic_type = models.CharField(max_length=30,
+    #                               default="Поганий контент")  # "BAD CONTENT","SELL","RENT","EXCHANGE","CHAIN_EXCHANGE"
 
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE, default=None)
     object_id = models.PositiveIntegerField(default=None)
@@ -618,32 +497,35 @@ class Complaints(models.Model):
                                                 default=None,
                                                 blank=True, null=True)
     created_time = models.DateTimeField(auto_now_add=True)
+
     def get_answer(self):
         try:
 
-           answer = ComplaintsAnswers.objects.get(complain_id_id = self.id)
-           return answer.json()
+            answer = ComplaintsAnswers.objects.get(complain_id_id=self.id)
+            return answer.json()
         except Exception as e:
             return None
+
     def get_object_user(self):
         res = None
-        print(222)
+
         try:
-           # print(str(self.content_type) == "proposals")
-            print(self.content_type )
-            if  str(self.content_type) == "proposals":
+            # print(str(self.content_type) == "proposals")
+            #print(self.content_type)
+            if str(self.content_type) == "proposals":
                 res = Proposals.objects.get(id=self.object_id).creator_id
-            elif  str(self.content_type) == "users":
+            elif str(self.content_type) == "users":
                 res = Users.objects.get(id=self.object_id)
-            print(res)
-            print("oBJECT")
+            #print(res)
+
         except Exception as e:
-            print(e)
-            print(res)
+            #print(e)
+            ##print(res)
             return None
-        return {"id": res.id, "name": res.name}
+        return {"id": res.id, "name": res.name, "email": res.email}
+
     def json(self):
-        return  {
+        return {
             "id": self.id,
             "complain_text": self.complain_text,
             "complain_initiator_user": self.complain_initiator_user.name,
@@ -653,33 +535,12 @@ class Complaints(models.Model):
             "answer": self.get_answer(),
             "object_id": self.object_id,
             "object_user": self.get_object_user()
-       #     "complain_object": self.content_type
+            #     "complain_object": self.content_type
         }
+
     class Meta:
         ordering = ["-created_time"]
 
 
-
-
-#   описати платежі
-"""
-class Donations(models.Model):
-    user_id = models.ForeignKey(Users, on_delete=models.CASCADE)
-    donation_time = models.DateTimeField(auto_now_add=True)
-    donation_message = models.TextField(default="")
-    donation_value = models.FloatField(default=1)
-    donation_currency = models.CharField(max_length=3, default="Гривня")
-
-"""
-
-# class SanctionsByAdmins(models.Model): # санкції за неправомірну поведінку адміном
-# зробити узгодження виставлення оцінок
-
-
-from django.db import models
-
-# Create your models here.
-"""
-class Document(models.Model):
-    docfile = models.FileField(upload_to='documents/%Y/%m/%d')
-"""
+def waited(self):
+    return PossibleItems.objects.filter(proposal_item_id_id=self.id).exists()

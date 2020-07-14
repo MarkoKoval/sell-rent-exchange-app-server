@@ -15,7 +15,7 @@ def find_possibille_chain(searched_for, possible):
     a = "ff"
     for i in range(0, len(possible) - 1):
         for j in range(i+1, len(possible)):
-            print(possible[i]["ware"] + " " +possible[j]["wanted"])
+            #print(possible[i]["ware"] + " " +possible[j]["wanted"])
             #if possible[i]["ware"] == possible[j]["wanted"]:
                 #print(1)
             if comparator(searched_for["ware"], possible[i]["wanted"]) and comparator(searched_for["wanted"],
@@ -40,7 +40,7 @@ available = [{"ware": "b", "wanted": "a"},
              {"ware": "d", "wanted": "e"}]
 searched = []
 result = find_possibille_chain(searched_for, available)
-print(result)
-print("*****")
+#print(result)
+#print("*****")
 result = simple(searched_for, available)
-print(result)
+#print(result)

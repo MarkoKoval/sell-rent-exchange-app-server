@@ -1,12 +1,12 @@
 from django.urls import path
 from .views import *
-from .billing_views import *
+
 from .system_entrence import system_entrence_
 from .user_profile import user_profile
 from .proposals import crud_proposals
 from .proposals_requests import proposals_requests
 from .donate import donate
-from .complain import complain_handler
+#from .complain import complain_handler
 from .chain_exchange import chain_exchange
 from .complain import complain_handler
 
@@ -37,7 +37,7 @@ urlpatterns = [
     path("upload_image/", list1),
     #  path('pay-callback/', PayCallbackView, name='pay_callback'),
 
-    path('create/simple/request/<int:id>', proposals_requests.create_simple_proposal_request),
+  #  path('create/simple/request/<int:id>', proposals_requests.create_simple_proposal_request),
     path('create/combined/request/<int:id>', proposals_requests.create_combined_proposal_request),
 
     path('get/requests/to_me/<int:id>', proposals_requests.get_proposal_requests_to_me),

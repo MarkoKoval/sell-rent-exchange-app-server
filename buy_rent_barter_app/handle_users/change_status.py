@@ -1,9 +1,9 @@
 from ..models import *
 from django.http import JsonResponse
-import json
+#import json
 from django.views.decorators.csrf import csrf_exempt
 from django.db import transaction
-from django.db.models import Q
+#from django.db.models import Q
 from ..notify_email import email_notify
 import threading
 @csrf_exempt
@@ -23,9 +23,7 @@ def change_role(self,id):
     t = threading.Thread(target=email_notify.send_email, args=("Повідомлення від платформи пропозицій продажу "
                                                                "оренди обміну товарів і послуг ",
                                                                "Зміна ролі коричтувача на "+user.role , user.email))
-    t.setDaemon(True)
     t.start()
-    t.join(10)
     return JsonResponse({},status=200)
 
 def change_blocked(self,id):
@@ -40,9 +38,7 @@ def change_blocked(self,id):
                                                                "оренди обміну товарів і послуг ",
                                                                "Ви заблоковані для повноцінної робити деталі у адміністратора  " if
                                                                user.is_blocked_by_admin == True else    "Ви розблоковані для повноцінної робити ", user.email))
-    t.setDaemon(True)
     t.start()
-    t.join(10)
     return JsonResponse({},status=200)
 
 def change_proposal_blocked(self,id):
